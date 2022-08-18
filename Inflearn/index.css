@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,6 +24,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    font-family: 'Pretendard', '-apple-system', 'BlinkMacSystemFont',system-ui, 'Roboto' ,'Helvetica Neue ','Segoe UI','Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -46,6 +49,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+input::-ms-clear,
+input::-ms-reveal{
+	display:none;width:0;height:0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+	display:none;
+}
 
 /* index.css */
 body{
@@ -54,18 +67,159 @@ body{
     align-items: center;
 }
 
+.wrapper{
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+}
+
+h6{
+    display: inline;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 텍스트 관련  */
+a{
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.a_checked{
+    font-size: 14px;
+    color: #1b1c1d;
+    font-weight: 700;
+}
+
+.a_unchecked{
+    font-size: 14px;
+    color: #858a8d;
+    font-weight: 500;
+}
+
 /* Top */
 header {
-    width: 1200px;
+    width: 100%;
     height: 40px;
-    border: 1px solid black;
-    /* border-bottom: 1px solid #f1f3f5; */
+    border-bottom: 1px solid #f1f3f5; 
+}
+
+#header_wrapper{
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header_left{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn_svg{
+    margin-right: 4px;
+}
+
+#header_divider{
+    margin: 0 10px;
 }
 
 #nav{
-    width: 1200px;
+    width: 100%;
     height: 60px;
-    border: 1px solid blue;
+}
+
+#nav_logo{
+    height: 100%;
+}
+
+#nav_bar{
+    height: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nav_bar_left{
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#nav_bar_right{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.a_nav{
+    padding: 8px 16px;
+    color: #4a4a4a;
+}
+
+#nav_search{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: none;
+    background: #f6f6f6;
+    color: #5f5f5f;
+    border: 1px solid transparent;
+
+    font-size: 1rem;
+}
+
+#nav_search:hover{
+    border-color: #b5b5b5;
+}
+
+#nav_search:focus{
+    outline:.04rem auto #1dc078;
+    box-shadow: 0 0 0 0.125em rgb(29 192 120 / 25%);;
+}
+
+#nav_search_div{
+    position: relative;
+    width: 140px;
+    height: 34px;
+    margin: 8px 20px;
+}
+
+#nav_search_icon{
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    right: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.button{
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.button_orange{
+    background-color: #ff7867;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* Main */
@@ -81,17 +235,67 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
-    /* border-bottom: 1px solid #f1f3f5; */
+     border-bottom: 1px solid #f1f3f5; 
 }
 
 #main_banner_swiper{
+    width: 100%;
     height: 320px;
     background-color: #00d078;
 }
 
+.swiper-slide {
+    box-sizing:border-box; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide-wrapper{
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.swiper-slide-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5%;
+}
+
+#main_banner_swiper img{
+    height: 100%;
+    object-fit: cover;
+}
+
 #main_banner_indicator{
     height: 64px;
+}
+
+.swiper-tag{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    width: fit-content;
+    height: 24px;
+    border-radius: 4px;
+
+    font-size: .875rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.swiper-title{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.swiper-content{
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Main - 검색 */
