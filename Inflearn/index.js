@@ -1,6 +1,11 @@
 window.onload = () => {
+    initMainBanner();
+    //initLecture();
+    setMyClickEvent();
+}
 
-    const swiper = new Swiper('.swiper', {
+const initMainBanner = () => {
+    const swiper = new Swiper('#main_banner_swiper', {
         direction: 'horizontal',
         loop: true,
         navigation: {
@@ -64,5 +69,39 @@ window.onload = () => {
         }
         })(i);
     }
-    
+}
+
+const initLecture = () => {
+    new Swiper('#free_lecture_swiper', {
+        direction: 'horizontal',
+        slidesPerView: 3,  
+        slidesPerGroup: 3,
+        spaceBetween: 20,
+    });
+}
+
+const setMyClickEvent = () => {
+    // 강의 이미지들 hover 
+    const lectures = document.getElementsByClassName('swiper-slide-lecture');
+    const backs = document.getElementsByClassName('swiper-slide-lecture-back');
+
+    for (var i = 0; i < lectures.length; i++) {
+        (function(protectedIndex){
+            lectures[i].addEventListener('mouseover', function (e){
+                backs[protectedIndex].style.display = 'block';
+            })
+
+            lectures[i].addEventListener('mouseout', function (e){
+                backs[protectedIndex].style.display = 'none';
+            })
+        })(i);
+    }
+
+    // document.getElementsByClassName('swiper-slide-lecture')[0].addEventListener('mouseover', function (e){
+    //     document.getElementsByClassName('swiper-slide-lecture-back')[0].style.display = 'block';
+    // })
+
+    // document.getElementsByClassName('swiper-slide-lecture')[0].addEventListener('mouseout', function (e){
+    //     document.getElementsByClassName('swiper-slide-lecture-back')[0].style.display = 'none';
+    // })
 }

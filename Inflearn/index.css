@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -81,14 +81,19 @@ body{
     flex-direction: row;
 }
 
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
 h6{
     display: inline;
     font-size: 14px;
     font-weight: 500;
 }
 
-.fa-solid .fa-regular{
-    font-family: Font Awesome\ 6 Pro;
+.fa-solid .fa-regular .fa-light{
+    font-family: 'Font Awesome 6 Pro';
     font-weight: 900;
     font-size: 0.65rem;
     cursor: pointer;
@@ -97,6 +102,7 @@ h6{
 /* 텍스트 관련  */
 a{
     text-decoration: none;
+    color: #000;
 
     display: flex;
     flex-direction: row;
@@ -497,7 +503,219 @@ main{
 .main_lecture{
     padding: 24px 0;
     border: 1px solid violet;
+
+    display: flex;
+    flex-direction: column;
 }
+
+.lecture_header{
+    border: 1px solid red;
+}
+
+.lecture_header h1{
+    margin-right: 10px;
+}
+
+.lecture_header p{
+    font-weight: 400;
+    color: #757575;
+    font-size: .9375rem;
+    line-height: 1.6;
+    margin-top: 4px;
+}
+
+.lecture_contents{
+    border: 1px solid yellowgreen;
+}
+
+.lecture{
+    width: 231.2px;
+    height: 100%;
+}
+.swiper-slide-lecture-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.swiper-slide-lecture{
+    height: 100%;
+    width: 231px;
+    position: relative;
+}
+
+.swiper-slide-lecture-front{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-slide-lecture-front img{
+    width: 100%;
+}
+
+.swiper-slide-lecture-front .lecture-title{
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.5em;
+    height: 3rem;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+}
+
+.swiper-slide-lecture-front .lecture-instructor{
+    color: #7d7d7d;
+    font-size: .9rem;
+}
+
+.swiper-slide-lecture-front .lecture-rating{
+    display: flex;
+    flex-direction: row;
+}
+
+.swiper-slide-lecture-front .lecture-rating .lecture-rating-stars{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.swiper-slide-lecture-front .lecture-rating .lecture-rating-number{
+    font-size: .5rem;
+    color: #4a4a4a;
+}
+
+.swiper-slide-lecture-front .lecture-price{
+    font-weight: 700;
+    color: #175cbe;
+}
+
+.swiper-slide-lecture-front .lecture-tag{
+    height: 2em;
+
+    background-color: #fff;
+    border-radius: 4px;
+    color: #454545;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: .75rem;
+    padding:0 0.75em;
+
+    cursor: pointer;
+}
+
+.swiper-slide-lecture-back{
+    padding: 0.75em;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    width: 231px;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    font-size: 13px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-slide-lecture-back .lecture-title{
+    font-size: .95rem;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-right: 10px;
+    margin-bottom: 8px;
+}
+
+.swiper-slide-lecture-back img{
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5em;
+}
+
+.swiper-slide-lecture-back .lecture-meta{
+    width: 95%;
+    height: fit-content;
+
+    display: flex;
+    align-items: flex-start;
+
+    text-overflow: ellipsis;
+    color: #c5ebf8;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+.swiper-slide-lecture-back .lecture-extra{
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+.swiper-slide-lecture-back .tooptip{
+    position: relative;
+    display: block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+
+    position: absolute;                    
+    right: 105%; 
+    z-index: 1;
+
+    color: #454545;
+    background-color: rgba(255,221,87,.9);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    max-width: 24rem;
+
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: .75rem;
+
+    margin-right: 10px;
+}
+
+.tooltip-like .tooltiptext{
+     top: -5px;        
+}
+
+.tooltip-plus .tooltiptext{
+     bottom: 0;        
+}
+
+.tooltiptext::after{
+    content: " ";           
+    position: absolute;      
+    border-style: solid;
+    border-width: 5px;        
+
+    top: 50%;                 
+    left: 100%;               
+    margin-top: -5px;
+
+    border-color: transparent transparent transparent rgba(255,221,87,.9);
+}
+
+.tooltip-like:hover .tooltiptext, .tooltip-plus:hover .tooltiptext{
+    visibility: visible;
+}
+
+.swiper-slide-lecture-back .lecture-extra img{
+    width: 18px;
+    height: 18px;
+}
+
 
 /* Main - 리뷰 */
 #main_review{
