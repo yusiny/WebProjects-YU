@@ -59,6 +59,11 @@ input::-webkit-search-results-button,
 input::-webkit-search-results-decoration{
 	display:none;
 }
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
 /* index.css */
 body{
@@ -322,7 +327,7 @@ main{
     align-items: center;
 
     padding: 0 1rem;
-    width: 135px;
+    width: 110px;
     height: 36px;
     font-size: .875rem;
     color: #fff;
@@ -331,7 +336,10 @@ main{
 }
 
 #main_banner_pagination_idx{
-    margin-right: auto;
+    display: block;
+    box-sizing: inherit;
+    font-size: .875rem;
+        
 }
 
 #main_banner_pagination_button_wrapper{
@@ -339,7 +347,6 @@ main{
     align-items: center;
     justify-content: space-between;
     width: 50px;
-
 }
 
 .divider{
@@ -372,12 +379,10 @@ main{
     cursor: pointer;
 }
 
-.main_banner_button:active{
+.main_banner_button:active, .main_banner_button_checked{
     color: #00c471;
     box-shadow: inset 0 0 0 2px #00c471
 }
-
-
 
 .button_toggle{
     font-size: 1rem;
