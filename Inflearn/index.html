@@ -22,7 +22,7 @@
             교육</a>
         <img id="header_divider" src="/src/ic_line.svg"/>
         <a href="/" class="a_unchecked">
-          <img class="btn_svg" onChek="false "src="/src/ic_ employment.svg"/>
+          <img class="btn_svg" src="/src/ic_ employment.svg"/>
           채용</a>
       </div>  
 
@@ -48,7 +48,7 @@
           <div id="nav_bar_right">
               <div id="nav_search_div">
                 <input id="nav_search" type="text">
-                <img id="nav_search_icon" src="/src/ic_search.svg"/>
+                <img class="search_icon" id="nav_search_icon" src="/src/ic_search.svg"/>
               </div>
 
             <a class="button"> 로그인 </a>
@@ -69,7 +69,7 @@
                 <div class="swiper-slide-left">
                     <h6 class="swiper-tag" style="color: #ffffff; background-color: #1044ff;">오늘 뭐 듣지?</h6>
                     <h1 class="swiper-title">무슨 강의 들을지 고민이라면?</h1>
-                    <h1 class="swiper-title">현직자 Top 50 먼저 보기</h1>
+                    <h1 class="swiper-title">현직자 Top 50 먼저 보기 👀</h1>
                     <p class="swiper-content">입문부터 실전까지! <br>믿고 보는 실무자 Pick</p>
                 </div>
                 <img class="swiper-slide-right" src="https://cdn.inflearn.com/public/main_sliders/7f3b415a-7267-49fc-9c68-9926b8c5f600/%5B22%E1%84%90%E1%85%A2%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC%5Db2b_top50_main_521.gif"/>
@@ -175,10 +175,21 @@
         </div>
       </section>
 
-      <section id="main_search">
+      <section id="main_search" class="wrapper">
         <h1 id="main_search_title">인프런에서 연봉을 올리세요</h1>
-        <input id="main_search_input"></input>
-        <div id="main_search_tag"></div>
+        <div id="main_search_input_wrapper">
+          <input id="main_search_input" placeholder="배우고 싶은 지식을 입력해 보세요."></input>
+           <img class="search_icon" id="main_search_icon" src="/src/ic_search.svg"/>
+        </div>
+        <div id="main_search_tag">
+            <span class="main_search_tag">#MVC</span>
+            <span class="main_search_tag">#Spring Boot</span>
+            <span class="main_search_tag">#JPA</span>
+            <span class="main_search_tag">#Python</span>
+            <span class="main_search_tag">#Java</span>
+            <span class="main_search_tag">#Sprint</span>
+            <span class="main_search_tag">#JavaScript</span>
+        </div>
       </section>
 
       <section id="main_lecture">
