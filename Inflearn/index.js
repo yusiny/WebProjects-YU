@@ -1,6 +1,7 @@
 window.onload = () => {
     initMainBanner();
     //initLecture();
+    initBottomBanner();
     setMyClickEvent();
 }
 
@@ -96,12 +97,11 @@ const setMyClickEvent = () => {
             })
         })(i);
     }
+}
 
-    // document.getElementsByClassName('swiper-slide-lecture')[0].addEventListener('mouseover', function (e){
-    //     document.getElementsByClassName('swiper-slide-lecture-back')[0].style.display = 'block';
-    // })
-
-    // document.getElementsByClassName('swiper-slide-lecture')[0].addEventListener('mouseout', function (e){
-    //     document.getElementsByClassName('swiper-slide-lecture-back')[0].style.display = 'none';
-    // })
+const initBottomBanner = () => {
+    new Swiper('#main_bottom_banner_swiper', {
+        direction: 'horizontal',
+        loop: true,
+    });
 }
