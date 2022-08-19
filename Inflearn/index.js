@@ -1,6 +1,5 @@
 window.onload = () => {
     initMainBanner();
-    //initLecture();
     initBottomBanner();
     setMyClickEvent();
 }
@@ -72,15 +71,6 @@ const initMainBanner = () => {
     }
 }
 
-const initLecture = () => {
-    new Swiper('#free_lecture_swiper', {
-        direction: 'horizontal',
-        slidesPerView: 3,  
-        slidesPerGroup: 3,
-        spaceBetween: 20,
-    });
-}
-
 const setMyClickEvent = () => {
     // 강의 이미지들 hover 
     const lectures = document.getElementsByClassName('swiper-slide-lecture');
@@ -100,8 +90,33 @@ const setMyClickEvent = () => {
 }
 
 const initBottomBanner = () => {
-    new Swiper('#main_bottom_banner_swiper', {
+    // Pagenation 위치 동적으로 지정 
+    const el = document.getElementById('main_bottom_banner_pagination');
+    el.style.right = (window.innerWidth - 1200) / 2 + "px";
+    console.log((window.innerWidth - 1200) / 2);
+    
+    const swiper = new Swiper('#main_bottom_banner_swiper', {
         direction: 'horizontal',
-        loop: true,
+         navigation: {
+            nextEl: "#swiper_bottom_button_next",
+            prevEl: "#swiper_bottom_button_prev",
+        },
+         pagination: {
+          el: "#main_bottom_banner_indicator",
+          clickable: true,
+        },
+    });
+
+    swiper.on('transitionEnd', function () {
+        console.log(swiper.realIndex);
+        if (swiper.realIndex == 0)
+            document.getElementById('swiper_bottom_button_prev').classList.add('button_swiper-disabled');
+        else
+            document.getElementById('swiper_bottom_button_prev').classList.remove('button_swiper-disabled');
+        
+         if (swiper.realIndex == 2)
+            document.getElementById('swiper_bottom_button_next').classList.add('button_swiper-disabled');
+        else
+            document.getElementById('swiper_bottom_button_next').classList.remove('button_swiper-disabled');
     });
 }
