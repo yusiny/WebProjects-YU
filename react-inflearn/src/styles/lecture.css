@@ -44,7 +44,9 @@
   margin-right: 6px;
 }
 
-.lecture img {
+.lecture img,
+.roadmap img,
+.read img {
   width: 100%;
 }
 
@@ -87,6 +89,11 @@
   color: #175cbe;
 }
 
+.lecture_tags {
+  display: flex;
+  padding-top: 8px;
+}
+
 .lecture_tag {
   height: 2em;
 
@@ -104,4 +111,72 @@
   cursor: pointer;
 
   margin-right: 0.5rem;
+}
+
+.lecture_price del {
+  color: #595959;
+  font-weight: 500;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Roadmap */
+.roadmap {
+  height: 100%;
+  position: relative;
+  width: 290.5px;
+  margin-right: 6px;
+}
+
+.roadmap_title {
+  font-weight: 700;
+  line-height: 1.125em;
+  font-size: 0.95rem;
+  margin-bottom: 0.8888em;
+  padding: 24px;
+}
+
+/* Read */
+.read {
+  position: relative;
+  height: 100%;
+  margin: 4px;
+  max-width: 32.2%;
+  width: 100%;
+}
+
+.read img {
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  margin-bottom: 20px;
+}
+
+.read_title {
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 4px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: nowrap;
+}
+
+.read_text {
+  font-size: 1rem;
+  color: #595959;
+  word-wrap: break-word;
+  height: 3rem;
+  width: 100%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
 }

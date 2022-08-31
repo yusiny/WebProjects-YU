@@ -1,4 +1,4 @@
-const lecture_free = {
+const course_free = {
   title: "무료강의? 오히려 좋아 ✨",
   desc: "무료 강의부터 가볍게 시작해 보세요.",
   icon: null,
@@ -84,7 +84,7 @@ const lecture_free = {
   ],
 };
 
-const lecture_starter = {
+const course_starter = {
   title: "왕초보도 할 수 있어요 💪",
   desc: "이미 검증된 쉽고 친절한 입문 강의!!",
   icon: null,
@@ -98,7 +98,7 @@ const lecture_starter = {
       producer: "워니",
       star: 5,
       ratings: 116,
-      price: "49,500",
+      price: "₩49,500",
       real_price: null,
       tags: [{ color: "hsl(321,63%,90%)", name: "+600명" }],
       meta_leve: "입문",
@@ -113,7 +113,7 @@ const lecture_starter = {
       producer: "인프런",
       star: 5,
       ratings: 687,
-      price: "55,000",
+      price: "₩55,000",
       real_price: null,
       tags: [{ color: "hsl(321,63%,90%)", name: "+13100명" }],
       meta_leve: "입문",
@@ -129,7 +129,7 @@ const lecture_starter = {
       producer: "Rookiss",
       star: 5,
       ratings: 440,
-      price: "44,000",
+      price: "₩44,000",
       real_price: null,
       tags: [{ color: "hsl(321,63%,90%)", name: "+3800명" }],
       meta_leve: "입문",
@@ -144,7 +144,7 @@ const lecture_starter = {
       producer: "DevStory",
       star: 5,
       ratings: 16,
-      price: "64,900",
+      price: "₩64,900",
       real_price: null,
       tags: [{ color: "hsl(321,63%,90%)", name: "+200명" }],
       meta_leve: "입문",
@@ -159,7 +159,7 @@ const lecture_starter = {
       producer: "Rookiss",
       star: 5,
       ratings: 8,
-      price: "11,000",
+      price: "₩11,000",
       real_price: null,
       tags: [{ color: "hsl(321,63%,90%)", name: "+700명" }],
       meta_leve: "입문",
@@ -169,4 +169,232 @@ const lecture_starter = {
   ],
 };
 
-export const courses = [lecture_free, lecture_starter];
+const course_roadmap = {
+  title: "기본부터 실무까지 제시해주는 로드맵 🏃🏻‍♀️",
+  desc: "아무것도 몰라도 따라오다 보면 전문가가 될 수 있어요!",
+  icon: "RoadMap!!",
+  type: "C",
+  contents: [
+    {
+      title: "MMORPG 게임 개발, 켠김에 끝판왕까지! (유니티 + C#)",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/roadmaps/0efaac78-41ca-4145-a99b-ead624f8ec36/roadmap-106.png",
+      producer: null,
+      star: null,
+      ratings: null,
+      price: null,
+      real_price: null,
+      tags: null,
+      meta_leve: null,
+      meta_folder: null,
+      meta_skill: null,
+    },
+    {
+      title: "자바 개발자 Level Up! - 더 나은 자바 개발자 되기",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/roadmaps/c6c69670-7155-423a-bc3a-80d9d3386953/roadmap-93.png",
+      producer: null,
+      star: null,
+      ratings: null,
+      price: null,
+      real_price: null,
+      tags: null,
+      meta_leve: null,
+      meta_folder: null,
+      meta_skill: null,
+    },
+    {
+      title: "코딩테스트 최적화 로드맵 🕵",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/roadmaps/daab306d-fbde-429f-ba4b-313e2d4e06b7/roadmap-54-2.png",
+      producer: null,
+      star: null,
+      ratings: null,
+      price: null,
+      real_price: null,
+      tags: null,
+      meta_leve: null,
+      meta_folder: null,
+      meta_skill: null,
+    },
+    {
+      title: "인생을 바꾸는 함수형 프로그래밍 👑",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/roadmaps/39a4366c-b886-4b38-87da-7797f0ef6ac7/roadmap-2.png",
+      producer: null,
+      star: null,
+      ratings: null,
+      price: null,
+      real_price: null,
+      tags: null,
+      meta_leve: null,
+      meta_folder: null,
+      meta_skill: null,
+    },
+  ],
+};
+
+const course_read = {
+  title: "읽어보기",
+  desc: null,
+  icon: null,
+  type: "D",
+  contents: [
+    {
+      title: "[큐레이션] INFCON 2022 기념 릴레이 할인 통합편!",
+      desc: "🌱 🏃 🎫인프런의 첫 번째 오프라인 콘퍼런스,INFCON 2022! 인프콘 발표자분들 중엔인프런 지식공유자가 많다는 사실, 아시나요?오늘은 인프콘을 기다리는 여러분들께몇몇 지식공유자를 소개해드리려고 찾아왔어요.",
+      image_url:
+        "https://cdn.inflearn.com/public/files/pages/180fc479-e7f7-4da1-be59-a4da13fdf3c1/curation-infcon2022-story-main.png",
+      producer: null,
+      star: null,
+      ratings: null,
+      price: null,
+      real_price: null,
+      tags: null,
+      meta_leve: null,
+      meta_folder: null,
+      meta_skill: null,
+    },
+    {
+      title: "[INFCON Tech Series] FE 개발자도 할 수 있다! RESTful API 개발",
+      desc: "FE 개발자도 할 수 있다! RESTful API 개발#REST #RESTful_API #API #Firebase #인프콘 ⓒMedium 개발자들이 함께 모여 서로의 경험과 인사이트를 나누는 축제, 인프콘! 8월 26일, 드디어 인프런의 첫 번째 오프라인 개발 콘퍼런스인 인프콘이 개최됩니다. 인프콘을 기다리는 인프러너 여러분들을 위해 인프런이 준비한 <Tech Series>! 인프콘에서 만날 수 있는 여러 기술에 대해 미리 알아볼 수 있도록 소개해 드릴게요.  인프콘에서 만나볼 수 있는 발표를 미리 살펴보는 <INFCON Tech Series>의 마지막 이야기, Restful API입니다. 프론트엔드 개발자와 백엔드 개발자 모두에게 중요한 RESTful API란",
+      image_url:
+        "https://cdn.inflearn.com/public/files/pages/4b326a17-3443-4c56-b3f8-017178b0379f/event-infcon-story-main-5.png",
+      producer: null,
+      star: null,
+      ratings: null,
+      price: null,
+      real_price: null,
+      tags: null,
+      meta_leve: null,
+      meta_folder: null,
+      meta_skill: null,
+    },
+    {
+      title: "[INFCON Tech Series] 지금 당장 DevOps를 해야 하는 이유",
+      desc: "DevOps가 왜 필요할까? #DevOps #데브옵스 #INFCON #인프콘 개발자들이 함께 모여 서로의 경험과 인사이트를 나누는 축제, 인프콘! 8월 26일, 드디어 인프런의 첫 번째 오프라인 개발 콘퍼런스인 인프콘이 개최됩니다. 인프콘을 기다리는 인프러너 여러분을 위해 인프런이 준비한 <INFCON Tech Series>! 인프콘에서 발표를 통해 만나볼 여러 기술에 대해 미리 살짝 소개해 드릴게요.",
+      image_url:
+        "https://cdn.inflearn.com/public/files/pages/34ee115e-22af-4241-8cc8-ea46ef6f5f93/event-infcon-story-main-4.png",
+      producer: null,
+      star: null,
+      ratings: null,
+      price: null,
+      real_price: null,
+      tags: null,
+      meta_leve: null,
+      meta_folder: null,
+      meta_skill: null,
+    },
+  ],
+};
+
+const course_new = {
+  title: "따끈따끈, 신규 강의를 만나보세요! 🙋🏻‍♀️",
+  desc: null,
+  icon: "NEW!!",
+  type: "B",
+  contents: [
+    {
+      title: "[자동화 완전 정복] 인스타그램 자동화 프로그램",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/courses/329289/cover/0d38eeb1-b3ff-4593-81f5-8da64078b140/329289-eng.png",
+      producer: "김지유",
+      star: 5,
+      ratings: 116,
+      price: "₩32,180",
+      real_price: "₩42,900",
+      tags: [
+        { color: "hsl(182,75%,94%)", name: "새강의" },
+        { color: "hsl(1,100%,89%)", name: "할인중" },
+      ],
+      meta_leve: "입문",
+      meta_folder: "취업 · 이직, 교양 · 기타",
+      meta_skill: "이력서, 면접",
+    },
+    {
+      title: "네이버카페 셋팅 최적화하기 -실습 동영상 강의",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/courses/329322/cover/398409c3-2055-4092-9594-bbc80ef3c34a/329322-eng.png",
+      producer: "입섭규",
+      star: 5,
+      ratings: 687,
+      price: "₩23,180",
+      real_price: "₩33,000",
+      tags: [
+        { color: "hsl(182,75%,94%)", name: "새강의" },
+        { color: "hsl(1,100%,89%)", name: "할인중" },
+      ],
+      meta_leve: "입문",
+      meta_folder: "프로그래밍 언어",
+      meta_skill: "Python, 딥러닝",
+    },
+    {
+      title: "일러스트레이터 때려잡기 PERPECT 강좌",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/courses/329341/cover/56adfcae-7b2c-43f4-938b-092286744890/329341-eng.png",
+      producer: "EDUPIC 미디어 강좌.",
+      star: 5,
+      ratings: 440,
+      price: "₩69,300",
+      real_price: "₩99,000",
+      tags: [
+        { color: "hsl(182,75%,94%)", name: "새강의" },
+        { color: "hsl(1,100%,89%)", name: "할인중" },
+      ],
+      meta_leve: "입문",
+      meta_folder: "게임 개발, 프로그래밍 언어",
+      meta_skill: "C#",
+    },
+    {
+      title: "실제 이력서 사례로 알아보는 [합격하는 이력서] 작성 가이드",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/courses/329235/cover/02b457b5-56de-4797-9a3e-17ba2470ae85/329235-eng.png",
+      producer: "오준석",
+      star: 5,
+      ratings: 16,
+      price: "₩44,400",
+      real_price: "₩55,000",
+      tags: [
+        { color: "hsl(182,75%,94%)", name: "새강의" },
+        { color: "hsl(1,100%,89%)", name: "할인중" },
+      ],
+      meta_leve: "입문",
+      meta_folder: "모바일 앱 개발",
+      meta_skill: "Flutter",
+    },
+    {
+      title: "RDBMS Modeling 프로그래밍 실습(C#)",
+      desc: null,
+      image_url:
+        "https://cdn.inflearn.com/public/courses/328573/cover/b91b0710-bbcb-4ee6-8027-dcc1b807b3db/328573-eng.png",
+      producer: "이교준",
+      star: 5,
+      ratings: 8,
+      price: "₩26,400",
+      real_price: "₩33,000",
+      tags: [
+        { color: "hsl(182,75%,94%)", name: "새강의" },
+        { color: "hsl(1,100%,89%)", name: "할인중" },
+      ],
+      meta_leve: "입문",
+      meta_folder: "기타, 게임 개발, 기타",
+      meta_skill: "Svelte",
+    },
+  ],
+};
+
+export const courses = [
+  course_free,
+  course_starter,
+  course_roadmap,
+  course_read,
+  course_new,
+];

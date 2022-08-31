@@ -108,7 +108,7 @@ main {
 #courses {
   display: flex;
   flex-direction: column;
-  border: 1px solid rebeccapurple;
+  padding: 24px 0;
 }
 
 /* Main - 리뷰 */
@@ -118,6 +118,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 24px 0;
 }
 
 #review_left {

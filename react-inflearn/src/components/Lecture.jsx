@@ -17,12 +17,18 @@ export default function Lecture({ lecture }) {
           </div>
           <p class="lecture_ratings_number">({lecture.ratings})</p>
         </div>
-        <p class="lecture_price">무료</p>
-        <div
-          class="lecture_tag"
-          style={{ backgroundColor: "hsl(321,63%,90%)" }}
-        >
-          +1600명
+        <p class="lecture_price">
+          {lecture.real_price != null ? <del>{lecture.real_price}</del> : null}
+          {lecture.price}
+        </p>
+        <div class="lecture_tags">
+          {lecture.tags.map((tag) => {
+            return (
+              <div class="lecture_tag" style={{ backgroundColor: tag.color }}>
+                {tag.name}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
