@@ -42,6 +42,7 @@
   width: 231.2px;
   height: 100%;
   margin-right: 6px;
+  position: relative;
 }
 
 .lecture img,
@@ -118,6 +119,109 @@
   font-weight: 500;
   font-size: 0.9rem;
   opacity: 0.75;
+}
+
+.lecture_back {
+  padding: 0.75em;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 231px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 13px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.lecture_back .lecture_title {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 700;
+  padding-right: 10px;
+  margin-bottom: 8px;
+}
+
+.lecture_back img {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
+}
+
+.lecture_back .lecture_meta {
+  width: 95%;
+  height: fit-content;
+
+  display: flex;
+  align-items: flex-start;
+
+  text-overflow: ellipsis;
+  color: #c5ebf8;
+  line-height: 1.5;
+  font-size: 13px;
+
+  margin-bottom: 0.07rem;
+}
+
+.lecture_back .lecture_extra {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+
+.lecture_back .tooltip {
+  position: relative;
+  display: block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+
+  position: absolute;
+  right: 105%;
+  z-index: 1;
+
+  color: #454545;
+  background-color: rgba(255, 221, 87, 0.9);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  max-width: 24rem;
+
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.75rem;
+
+  margin-right: 10px;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+
+  border-color: transparent transparent transparent rgba(255, 221, 87, 0.9);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip_plus .tooltiptext {
+  bottom: 0;
+}
+
+.tooltip_like .tooltiptext {
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 /* Roadmap */

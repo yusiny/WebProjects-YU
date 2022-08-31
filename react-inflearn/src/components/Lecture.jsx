@@ -31,6 +31,37 @@ export default function Lecture({ lecture }) {
           })}
         </div>
       </div>
+
+      <div class="lecture_back" style={{ display: "none" }}>
+        <p class="lecture_title">{lecture.title}</p>
+        <div class="lecture_meta">
+          <img src="/assets/ic_level.svg" />
+          <span>{lecture.meta_level}</span>
+        </div>
+        <div class="lecture_meta">
+          <img src="/assets/ic_folder.svg" />
+          <span>{lecture.meta_folder}</span>
+        </div>
+        <div class="lecture_meta">
+          <img src="/assets/ic_skill.svg" />
+          <span>{lecture.meta_skill}</span>
+        </div>
+
+        <div class="lecture_extra">
+          <div class="tooltip tooltip-cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span class="tooltiptext"> 수강바구니에 추가 </span>
+          </div>
+          <div class="tooltip tooltip_like">
+            <img src="/assets/ic_heart.svg" />
+            <span class="tooltiptext"> 좋아요에 추가 </span>
+          </div>
+          <div class="tooltip tooltip_plus">
+            <img src="/assets/ic_plus.svg" />
+            <span class="tooltiptext"> 내 폴더에 추가 </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
