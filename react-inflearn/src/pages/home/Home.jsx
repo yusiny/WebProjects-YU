@@ -1,5 +1,7 @@
 import React from "react";
+import Course from "../../components/Course";
 
+import { courses } from "../../assets/courses";
 import "./home.css";
 
 export default function Home() {
@@ -34,8 +36,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="lecture" class="wrapper">
-        강의 영역
+      <section id="courses" class="wrapper">
+        {courses.map((course) => {
+          return <Course information={course} />;
+        })}
       </section>
 
       <section id="review" class="wrapper">
@@ -191,10 +195,10 @@ export default function Home() {
         <div id="bottom_banner_indicator"> </div>
       </section>
 
-      <section id="main_corporation">
+      <section id="corporation">
         <div class="wrapper">
           <h3>이미 많은 기업 구성원들이 인프런에서 성장하고 있어요.</h3>
-          <div id="main_corporation_logos">
+          <div id="corporation_logos">
             <img src="https://cdn.inflearn.com/public/group_logo/0/c085de89-e640-4bc0-afad-efd1e96dbb58/%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB.png" />
             <img src="https://cdn.inflearn.com/public/group_logo/0/0add4321-40e2-46db-9aac-3222b25a69c4/%E1%84%8B%E1%85%AE%E1%84%8B%E1%85%A1%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%A6%E1%84%83%E1%85%B3%E1%86%AF.png" />
             <img src="https://cdn.inflearn.com/public/group_logo/0/34618dc7-2862-4db0-9bbc-631ca0c8f5b5/sk.png" />
@@ -208,14 +212,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="main_apply">
+      <section id="apply">
         <div class="wrapper">
           <h1>다양한 서비스를 신청하세요.</h1>
           <p>
             인프런의 지식공유자 '비즈니스' 대학생 신청방법에 대해 알아보세요.
           </p>
-          <div id="main_apply_cards">
-            <div class="main_apply_card">
+          <div id="apply_cards">
+            <div class="apply_card">
               <h3>지식공유자 되기</h3>
               <p>
                 9개월간 온라인 기술 강의로만 1억원! <br />
@@ -231,7 +235,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div class="main_apply_card">
+            <div class="apply_card">
               <h3>인프런 비즈니스 신청</h3>
               <p>
                 모든 팀원의 인프런의 강의들을 자유롭게 학습하는 환경을
@@ -248,7 +252,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div class="main_apply_card">
+            <div class="apply_card">
               <h3>인프런 X 대학생</h3>
               <p>
                 학교와 인프런이 함께 하여, <br />

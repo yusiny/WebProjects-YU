@@ -105,7 +105,9 @@ main {
 }
 
 /* Main - 강의 */
-#lecture {
+#courses {
+  display: flex;
+  flex-direction: column;
   border: 1px solid rebeccapurple;
 }
 
@@ -326,18 +328,18 @@ main {
 }
 
 /* Main - 기업 */
-#main_corporation {
+#corporation {
   width: 100%;
   height: 104px;
   padding: 64px 0 44px;
 }
 
-#main_corporation .wrapper {
+#corporation .wrapper {
   display: flex;
   flex-direction: column;
 }
 
-#main_corporation h3 {
+#corporation h3 {
   width: 100%;
   text-align: center;
 
@@ -348,50 +350,50 @@ main {
   font-weight: 700;
 }
 
-#main_corporation #main_corporation_logos {
+#corporation #corporation_logos {
   display: flex;
   justify-content: center;
 }
 
-#main_corporation #main_corporation_logos img {
+#corporation #corporation_logos img {
   margin: 0 15px 20px;
   height: 28px;
   filter: grayscale(1);
 }
 
 /* Main - 서비스 */
-#main_apply {
+#apply {
   width: 100%;
   background-color: #f9f9f9;
   padding: 48px 0;
 }
 
-#main_apply .wrapper {
+#apply .wrapper {
   display: flex;
   flex-direction: column;
 }
 
-#main_apply .wrapper h3 {
+#apply .wrapper h3 {
   color: #1e1e1e;
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 4px;
 }
 
-#main_apply .wrapper p {
+#apply .wrapper p {
   font-weight: 400;
   color: #757575;
   font-size: 0.9375rem;
   margin-bottom: 20px;
 }
 
-#main_apply #main_apply_cards {
+#apply #apply_cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#main_apply #main_apply_cards .main_apply_card {
+#apply #apply_cards .apply_card {
   width: 380px;
   height: 330px;
 
@@ -408,7 +410,7 @@ main {
   align-items: flex-start;
 }
 
-#main_apply #main_apply_cards .main_apply_card h3 {
+#apply #apply_cards .apply_card h3 {
   color: #363636;
   font-size: 1.125rem;
   font-weight: 700;
@@ -416,13 +418,13 @@ main {
   margin-bottom: 8px;
 }
 
-#main_apply #main_apply_cards .main_apply_card p {
+#apply #apply_cards .apply_card p {
   width: 100%;
   color: #757575;
   font-size: 1rem;
 }
 
-#main_apply #main_apply_cards .main_apply_card a {
+#apply #apply_cards .apply_card a {
   line-height: 1;
   background-color: #1dc078;
   color: #fff;
