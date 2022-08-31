@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+/* 텍스트 관련  */
+a {
+  text-decoration: none;
+  color: #000;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.a_checked {
+  font-size: 14px;
+  color: #1b1c1d;
+  font-weight: 700;
+}
+
+.a_unchecked {
+  font-size: 14px;
+  color: #858a8d;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.content {
+  display: inline;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.fa-solid .fa-regular .fa-light {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+
+/* 이미지, 버튼 관련 */
+.btn_svg {
+  margin-right: 4px;
+}
+
+.button {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.button_orange {
+  background-color: #ff7867;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 8px;
+  color: #fff;
+  cursor: pointer;
+
+  font-size: 1rem;
+  line-height: 1;
+}

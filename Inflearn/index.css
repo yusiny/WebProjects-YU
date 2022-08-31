@@ -202,6 +202,8 @@ header {
     color: #5f5f5f;
     border: 1px solid transparent;
 
+    padding: calc(0.375em - 1px) calc(0.625em - 1px);
+    box-sizing: border-box;
     font-size: 1rem;
 }
 
@@ -223,7 +225,7 @@ header {
 
 .search_icon{
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 5px;
     margin: 0;
     cursor: pointer;
@@ -625,6 +627,19 @@ main{
     color: #175cbe;
 }
 
+.swiper-slide-lecture-front .lecture-price del{
+    color: #595959;
+    font-weight: 500;
+    font-size: .9rem;
+    opacity: .75;
+}
+
+.swiper-slide-lecture-front .lecture-tags{
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
 .swiper-slide-lecture-front .lecture-tag{
     height: 2em;
 
@@ -640,6 +655,8 @@ main{
     padding:0 0.75em;
 
     cursor: pointer;
+
+    margin-right: 0.5rem;
 }
 
 .swiper-slide-lecture-back{
@@ -765,6 +782,29 @@ main{
     font-size: 16px;
     padding-bottom: 5px;
 }
+
+.swiper-slide-lecture-discount-card{
+    position: absolute;
+    top: 5%;
+    right: 0;
+
+    padding: 0.125rem;
+    color: #fff;
+    background: #ff6318;
+    font-size: .875rem;
+    font-weight: 700;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #fff;
+
+    display: inline-flex;
+    align-items: center;
+}
+
+.swiper-slide-lecture-discount-card img{
+    margin-right: 5px;
+}
+
 
 .swiper-slide-roadmap .swiper-slide-lecture-contents{
     display: flex;

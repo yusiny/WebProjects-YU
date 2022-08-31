@@ -1,0 +1,435 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main - 메인 배너 */
+#main_banner_contents {
+  width: 100%;
+  height: 320px;
+  background-color: aqua;
+}
+
+#main_banner_indicator {
+  width: 100%;
+  height: 64px;
+  background-color: yellow;
+}
+
+#search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 48px;
+  margin-bottom: 24px;
+}
+
+#search_title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.125;
+  margin-bottom: 20px;
+}
+
+#search_input_wrapper {
+  max-width: 580px;
+  width: 100%;
+  position: relative;
+}
+
+#search_input {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+
+  background-color: rgba(29, 192, 120, 0.12);
+  border: 1px solid rgba(29, 192, 120, 0.24);
+
+  padding: 14px 20px;
+  border-radius: 28px;
+  transition: all 0.2s ease;
+
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: 1rem;
+  justify-content: flex-start;
+  line-height: 1.5;
+}
+
+#search_input::placeholder {
+  color: rgba(12, 95, 58, 0.3);
+}
+
+#search_input:focus {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+  border: 1px solid rgb(0 0 0 / 10%);
+}
+
+#search_icon {
+  width: 24px;
+  top: 15px;
+  right: 20px;
+}
+
+#search_tag {
+  padding: 0;
+  width: 580px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 10px 0 24px 0;
+}
+
+.search_tag {
+  cursor: pointer;
+
+  font-size: 12px;
+  margin: 4px;
+  padding: 0 12px;
+  height: 28px;
+  line-height: 28px;
+
+  color: #3e4042;
+  font-weight: 500;
+  border-radius: 20px;
+  background: #f1f3f5;
+}
+
+/* Main - 강의 */
+#lecture {
+  border: 1px solid rebeccapurple;
+}
+
+/* Main - 리뷰 */
+#review {
+  width: 1200px;
+  height: 480px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#review_left {
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px 16px 40px 0;
+}
+
+#review_left h1 {
+  color: #242424;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.33;
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+}
+
+#review_left span {
+  color: #47c880;
+}
+
+#review_left p {
+  color: #757575;
+  font-size: 1rem;
+  margin-bottom: 36px;
+}
+
+#review_left #review_buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.button_green {
+  font-size: 16px;
+  color: #333;
+  border-radius: 3px;
+  border: 1px solid #1dc078;
+  background-color: #fff;
+  line-height: 1;
+  padding: 10px 16px;
+  margin: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+
+.button_green img {
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+}
+
+.button_green:hover {
+  background-color: rgba(29, 192, 120, 0.12);
+}
+
+#review_right {
+  width: 500px;
+}
+
+.swiper-review-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.swiper-review-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper-slide-review {
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  box-shadow: 0 2px 3px rgb(0 10 18 / 10%), 0 0 0 1px rgb(0 10 18 / 10%);
+
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.swiper-slide-review .review-writer {
+  font-size: 0.9375rem;
+  color: #757570;
+  margin-right: 8px;
+  margin-bottom: 16px;
+}
+
+.swiper-slide-review .review-writer span {
+  font-size: 0.875rem;
+  color: #979797;
+}
+
+.swiper-slide-review .review-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.swiper-slide-review .review-title img {
+  width: 14px;
+  height: 14px;
+}
+
+/* Main - 하단 배너 */
+#bottom_banner {
+  position: relative;
+  width: 100%;
+  height: 182px;
+  margin: 24px 0;
+}
+
+#bottom_banner_swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#bottom_banner #bottom-banner1 {
+  background-image: url("https://cdn.inflearn.com/public/main_sliders/3b67a1a1-aae3-442e-8e17-791b7cdfb5f5/bottom-1920-205-%281111%29.jpg");
+}
+
+#bottom_banner_swiper .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#bottom_banner_swiper .swiper-slide p {
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #404040;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+#bottom_banner_swiper .swiper-slide a {
+  background: #fff;
+  color: #1dc078;
+  border-radius: 4px;
+  box-shadow: none;
+
+  font-weight: 700;
+  font-size: 1rem;
+  height: auto;
+  line-height: 1;
+
+  padding: 12px 16px;
+  align-items: center;
+}
+
+#bottom_banner_pagination {
+  display: flex;
+  position: absolute;
+  right: 4px;
+  bottom: 16px;
+  z-index: 1;
+}
+
+.button_swiper {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  color: #1e1e1e;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button_swiper-disabled {
+  background-color: hsla(0, 0%, 97.6%, 0.7);
+  color: #979797;
+}
+
+.button_swiper img {
+  width: 8px;
+  height: 13px;
+}
+
+#bottom_banner_indicator {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  z-index: 10;
+}
+
+#bottom_banner_indicator .swiper-pagination-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: hsla(0, 0%, 100%, 1);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#bottom_banner_indicator .swiper-pagination-bullet-active {
+  width: 32px;
+  background-color: #fff;
+}
+
+/* Main - 기업 */
+#main_corporation {
+  width: 100%;
+  height: 104px;
+  padding: 64px 0 44px;
+}
+
+#main_corporation .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#main_corporation h3 {
+  width: 100%;
+  text-align: center;
+
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#main_corporation #main_corporation_logos {
+  display: flex;
+  justify-content: center;
+}
+
+#main_corporation #main_corporation_logos img {
+  margin: 0 15px 20px;
+  height: 28px;
+  filter: grayscale(1);
+}
+
+/* Main - 서비스 */
+#main_apply {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 48px 0;
+}
+
+#main_apply .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#main_apply .wrapper h3 {
+  color: #1e1e1e;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+#main_apply .wrapper p {
+  font-weight: 400;
+  color: #757575;
+  font-size: 0.9375rem;
+  margin-bottom: 20px;
+}
+
+#main_apply #main_apply_cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#main_apply #main_apply_cards .main_apply_card {
+  width: 380px;
+  height: 330px;
+
+  padding: 48px;
+  box-sizing: border-box;
+  margin: 2px;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  background-color: #fff;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#main_apply #main_apply_cards .main_apply_card h3 {
+  color: #363636;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.125;
+  margin-bottom: 8px;
+}
+
+#main_apply #main_apply_cards .main_apply_card p {
+  width: 100%;
+  color: #757575;
+  font-size: 1rem;
+}
+
+#main_apply #main_apply_cards .main_apply_card a {
+  line-height: 1;
+  background-color: #1dc078;
+  color: #fff;
+  margin-top: auto;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 290486px;
+
+  font-weight: 700;
+}
