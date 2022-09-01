@@ -3,13 +3,14 @@ import Course from "../../components/Course";
 
 import { courses } from "../../assets/courses";
 import "./home.css";
+import "./slider.css";
+import MainBannerSlider from "./MainBannerSlider";
 
 export default function Home() {
   return (
     <>
       <section id="main_banner">
-        <div id="main_banner_contents">main banner</div>
-        <div id="main_banner_indicator"></div>
+        <MainBannerSlider />
       </section>
 
       <section id="search" class="wrapper">

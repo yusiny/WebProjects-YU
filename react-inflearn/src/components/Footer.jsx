@@ -1,6 +1,14 @@
 import React from "react";
 import "../styles/footer.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faYoutube,
+  faFacebookF,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+
 export default function Footer() {
   return (
     <footer>
@@ -76,16 +84,16 @@ export default function Footer() {
               <i class="text">B</i>
             </a>
             <a class="button_bottom_logo">
-              <i class="fa-brands fa-instagram"></i>
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a class="button_bottom_logo">
-              <i class="fa-brands fa-youtube"></i>
+              <FontAwesomeIcon icon={faYoutube} />
             </a>
             <a class="button_bottom_logo">
-              <i class="fa-brands fa-facebook-f"></i>
+              <FontAwesomeIcon icon={faFacebookF} />
             </a>
             <a class="button_bottom_logo">
-              <i class="fa-brands fa-twitter"></i>
+              <FontAwesomeIcon icon={faTwitter} />
             </a>
           </div>
         </div>
