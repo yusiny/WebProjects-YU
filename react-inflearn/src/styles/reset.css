@@ -152,9 +152,6 @@ button {
   appearance: none;
   -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
-  display: none;
-}
 
 #root {
   width: 100%;

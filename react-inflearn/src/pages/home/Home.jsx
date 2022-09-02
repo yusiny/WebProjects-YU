@@ -1,11 +1,12 @@
 import React from "react";
 import Course from "../../components/Course";
-
 import { courses } from "../../assets/courses";
+
 import "./home.css";
-import "./slider.css";
-import MainBannerSlider from "./MainBannerSlider";
-import BottomBannerSlider from "./BottomBannerSlider";
+import "../home/Sliders/slider.css";
+
+import MainBannerSlider from "../home/Sliders/MainBannerSlider";
+import BottomBannerSlider from "../home/Sliders/BottomBannerSlider";
 
 export default function Home() {
   return (
@@ -199,7 +200,7 @@ export default function Home() {
                 가져가세요.
               </p>
               <a>
-                지식공유자 참여하기{" "}
+                지식공유자 참여하기
                 <i
                   class="fa-solid fa-arrow-right"
                   style={{ fontSize: "12px", marginLeft: "4px" }}

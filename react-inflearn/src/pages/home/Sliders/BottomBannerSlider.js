@@ -4,6 +4,7 @@ import "swiper/css";
 
 export default function BottomBannerSlider() {
   const swiperRef = React.useRef(null);
+
   return (
     <Swiper ref={swiperRef} id="bottom_banner_swiper">
       <SwiperSlide
@@ -56,6 +57,7 @@ export default function BottomBannerSlider() {
           <a>공고 확인하기</a>
         </div>
       </SwiperSlide>
+
       <div class="buttons_wrapper">
         <div class="buttons_container">
           <div
