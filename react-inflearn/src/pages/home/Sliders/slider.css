@@ -145,6 +145,8 @@
   width: 100%;
   height: 182px;
   margin: 24px 0;
+
+  white-space: pre-line;
 }
 
 #bottom_banner_swiper .slide_wrapper {
