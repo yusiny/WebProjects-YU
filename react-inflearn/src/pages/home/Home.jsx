@@ -5,6 +5,7 @@ import { courses } from "../../assets/courses";
 import "./home.css";
 import "./slider.css";
 import MainBannerSlider from "./MainBannerSlider";
+import BottomBannerSlider from "./BottomBannerSlider";
 
 export default function Home() {
   return (
@@ -163,37 +164,7 @@ export default function Home() {
       </section>
 
       <section id="bottom_banner">
-        <div id="bottom_banner_swiper" class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" id="bottom-banner1">
-              <div class="wrapper">
-                <p>
-                  모든 팀원이 인프런의 강의들을 <br />
-                  자유롭게 학습하는 환경을 제공해 주세요.
-                </p>
-                <a>비즈니스 알아보기</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="bottom_banner_pagination">
-          <div
-            class="button_swiper button_swiper-disabled"
-            id="swiper_bottom_button_prev"
-          >
-            <img src="/assets/ic_left.svg" />
-          </div>
-          <div
-            class="button_swiper"
-            id="swiper_bottom_button_next"
-            style={{ marginLeft: "4px" }}
-          >
-            <img src="/assets/ic_right.svg" />
-          </div>
-        </div>
-
-        <div id="bottom_banner_indicator"> </div>
+        <BottomBannerSlider />
       </section>
 
       <section id="corporation">

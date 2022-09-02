@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper/core";
 import "swiper/css";
@@ -20,6 +20,7 @@ export default function MainBannerSlider() {
     loop: true,
     autoplay: {
       delay: 4000,
+      disableOnInteraction: false,
     },
   };
 
