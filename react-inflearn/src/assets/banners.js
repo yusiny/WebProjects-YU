@@ -1,3 +1,4 @@
+// 메인 배너 더미데이터
 export const mainBanners = [
   {
     tag: {
@@ -96,6 +97,7 @@ export const mainBanners = [
   },
 ];
 
+// 하단 배너 더미데이터
 export const bottomBanners = [
   {
     background_url:

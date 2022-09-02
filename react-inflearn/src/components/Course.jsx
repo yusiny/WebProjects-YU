@@ -19,7 +19,6 @@ export default function Course({ information }) {
 
       <div class="course_contents">
         {information.contents.map((lecture) => {
-          <span>{information.type}</span>;
           switch (information.type) {
             case "A":
             case "B":

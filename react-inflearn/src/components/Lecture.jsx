@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { useEffect } from "react";
 
 export default function Lecture({ lecture }) {
   const [display, setDisplay] = useState("none");

@@ -391,6 +391,7 @@ const course_new = {
   ],
 };
 
+// 코스 더미데이터
 export const courses = [
   course_free,
   course_starter,

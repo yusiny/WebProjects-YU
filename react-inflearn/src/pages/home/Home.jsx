@@ -5,8 +5,8 @@ import { courses } from "../../assets/courses";
 import "./home.css";
 import "../home/Sliders/slider.css";
 
-import MainBannerSlider from "../home/Sliders/MainBannerSlider";
-import BottomBannerSlider from "../home/Sliders/BottomBannerSlider";
+import MainBannerSlider from "../Sliders/MainBannerSlider";
+import BottomBannerSlider from "../Sliders/BottomBannerSlider";
 
 export default function Home() {
   return (

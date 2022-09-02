@@ -11,7 +11,7 @@ import {
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { mainBanners } from "../../../assets/banners";
+import { mainBanners } from "../../assets/banners";
 
 SwiperCore.use([Autoplay]);
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { bottomBanners } from "../../../assets/banners";
+import { bottomBanners } from "../../assets/banners";
 
 export default function BottomBannerSlider() {
   const swiperRef = React.useRef(null);
