@@ -87,3 +87,17 @@ h1 {
   font-size: 1rem;
   line-height: 1;
 }
+
+/* FAB */
+.floating-button {
+  display: inline-block;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+}
+
+.floating-button img {
+  width: 157px;
+  height: 74px;
+}

@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useEffect } from "react";
 
 export default function Lecture({ lecture }) {
+  const [display, setDisplay] = useState("none");
+  const onHover = (boolean) => {
+    console.log(boolean);
+    if (boolean) setDisplay("block");
+    else setDisplay("none");
+  };
+
   return (
-    <div class="lecture">
+    <div
+      class="lecture"
+      onMouseEnter={() => onHover(true)}
+      onMouseOut={() => onHover(false)}
+    >
       <div class="lecture_front">
         <img src={lecture.image_url} />
         <h1 class="lecture_title">{lecture.title}</h1>
@@ -32,7 +44,7 @@ export default function Lecture({ lecture }) {
         </div>
       </div>
 
-      <div class="lecture_back" style={{ display: "none" }}>
+      <div class="lecture_back" style={{ display: display }}>
         <p class="lecture_title">{lecture.title}</p>
         <div class="lecture_meta">
           <img src="/assets/ic_level.svg" />

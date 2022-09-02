@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper/core";
 import "swiper/css";
@@ -22,6 +22,28 @@ export default function MainBannerSlider() {
       delay: 4000,
       disableOnInteraction: false,
     },
+    onSlideChange: (swiperCore) => {
+      onPageChange(swiperCore.realIndex + 1);
+    },
+  };
+
+  const [pageIdx, setPageIdx] = useState(0);
+  const onPageChange = (pageIdx) => {
+    setPageIdx(pageIdx);
+  };
+
+  const { playRef, pauseRef } = React.useRef(null);
+  const onAutoplay = (boolean) => {
+    swiperRef.current.autoplay = boolean;
+    console.log(swiperRef.current, boolean, playRef.current, pauseRef.current);
+
+    if (boolean) {
+      playRef.current.style.display = "block";
+      pauseRef.current.style.display = "none";
+    } else {
+      playRef.current.style.display = "block";
+      pauseRef.current.style.display = "none";
+    }
   };
 
   return (
@@ -200,7 +222,7 @@ export default function MainBannerSlider() {
       <div id="main_banner_controls">
         <div class="wrapper main_banner_indicator_wrapper">
           <div id="main_banner_pagination_wrapper">
-            <span id="main_banner_pagination_idx">1/7</span>
+            <span id="main_banner_pagination_idx">{pageIdx}/7</span>
 
             <div id="main_banner_pagination_button_wrapper">
               <FontAwesomeIcon
@@ -210,12 +232,16 @@ export default function MainBannerSlider() {
               <FontAwesomeIcon
                 icon={faPlay}
                 id="main_banner_play"
+                ref={playRef}
                 style={{ display: "none" }}
+                onClick={() => onAutoplay(false)}
               />
 
               <img
                 src="/assets/ic_pause.svg"
                 style={{ width: "14px", height: "14px" }}
+                ref={pauseRef}
+                onClick={() => onAutoplay(true)}
               />
 
               <FontAwesomeIcon
