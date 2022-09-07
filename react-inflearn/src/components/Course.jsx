@@ -41,3 +41,8 @@ export default function Course({ information }) {
     </div>
   );
 }
+
+/* 수정 */
+// () && ()
+// default
+// 삼항연산자 중첩은 잘못된 방법

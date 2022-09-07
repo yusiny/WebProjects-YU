@@ -3,7 +3,7 @@ import Course from "../../components/Course";
 import { courses } from "../../assets/courses";
 
 import "./home.css";
-import "../home/Sliders/slider.css";
+import "../Sliders/slider.css";
 
 import MainBannerSlider from "../Sliders/MainBannerSlider";
 import BottomBannerSlider from "../Sliders/BottomBannerSlider";

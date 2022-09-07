@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 export default function Lecture({ lecture }) {
   const [display, setDisplay] = useState("none");
@@ -76,3 +76,6 @@ export default function Lecture({ lecture }) {
     </div>
   );
 }
+
+/* 수정 */
+// state boolean으로
