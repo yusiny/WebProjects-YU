@@ -1,11 +1,15 @@
 import React from "react";
 
-export default function LoginModal() {
+export default function LoginModal(props) {
+  function closeModal() {
+    props.closeModal();
+  }
+
   return (
-    <div className="modal">
-      <div className="body">
+    <div className="modal" onClick={closeModal}>
+      <div className="body" onClick={(e) => e.stopPropagation()}>
         <div id="login-modal">
-          <span className="header-close">
+          <span className="header-close" onClick={closeModal}>
             <img src="/assets/ic_close.svg" />
           </span>
           <span className="header-logo">

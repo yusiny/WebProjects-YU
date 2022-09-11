@@ -43,7 +43,7 @@ export default function Nav() {
                 />
               </div>
 
-              <a class="button" onClick={() => setLogin(true)}>
+              <a class="button" onClick={() => setLogin(!login)}>
                 로그인
               </a>
               <a class="button_orange"> 회원가입 </a>
@@ -51,7 +51,7 @@ export default function Nav() {
           </div>
         </div>
       </nav>
-      {login && <LoginModal />}
+      {login && <LoginModal closeModal={() => setLogin(!login)} />}
     </>
   );
 }
