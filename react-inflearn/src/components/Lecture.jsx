@@ -73,6 +73,3 @@ export default function Lecture({ lecture }) {
     </div>
   );
 }
-
-/* 수정 */
-// state boolean으로
