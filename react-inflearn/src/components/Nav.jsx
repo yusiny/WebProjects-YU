@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "../styles/nav.css";
+import Modal from "./Modal";
 import LoginModal from "./LoginModal";
 
 export default function Nav() {
@@ -51,7 +52,11 @@ export default function Nav() {
           </div>
         </div>
       </nav>
-      {login && <LoginModal closeModal={() => setLogin(!login)} />}
+      {login && (
+        <Modal closeModal={() => setLogin(!login)}>
+          <LoginModal closeModal={() => setLogin(!login)} />
+        </Modal>
+      )}
     </>
   );
 }
