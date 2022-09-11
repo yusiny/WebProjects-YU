@@ -1,9 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function LoginModal(props) {
   function closeModal() {
     props.closeModal();
   }
+
+  const [showPw, setShowPw] = useState(true);
+
+  const [email, setEmail] = useState("");
+  const [pw, setPw] = useState("");
+  const [emailValid, setEmailValid] = useState(false);
+  const [pwValid, setPwValid] = useState(false);
+  const [valid, setValid] = useState(false);
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+
+    const regex =
+      /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+
+    if (regex.test(email)) {
+      setEmailValid(true);
+    } else {
+      setEmailValid(false);
+    }
+  };
+  const handlePw = (e) => {
+    setPw(e.target.value);
+
+    const regex =
+      /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
+
+    if (regex.test(pw)) {
+      setPwValid(true);
+    } else {
+      setPwValid(false);
+    }
+  };
+  useEffect(() => {
+    if (emailValid && pwValid) {
+      setValid(false);
+      return;
+    }
+
+    setValid(true);
+  }, [emailValid, pwValid]);
 
   return (
     <div id="login-modal">
@@ -16,7 +57,13 @@ export default function LoginModal(props) {
 
       <div className="inputs">
         <div className="inputWrap">
-          <input className="input" type="email" placeholder="이메일"></input>
+          <input
+            className="input"
+            type="email"
+            placeholder="이메일"
+            value={email}
+            onChange={handleEmail}
+          />
         </div>
 
         <div className="inputWrap">
@@ -24,12 +71,21 @@ export default function LoginModal(props) {
             className="input"
             type="password"
             placeholder="비밀번호"
+            value={pw}
+            onChange={handlePw}
           ></input>
-          <img src="/assets/ic_eye_on.svg" />
+          {showPw && (
+            <img src="/assets/ic_eye_on.svg" onClick={() => setShowPw(false)} />
+          )}
+          {!showPw && (
+            <img src="/assets/ic_eye_off.svg" onClick={() => setShowPw(true)} />
+          )}
         </div>
 
         <div>
-          <button className="loginButton">로그인</button>
+          <button className="loginButton" disabled={valid}>
+            로그인
+          </button>
         </div>
       </div>
 
@@ -37,6 +93,7 @@ export default function LoginModal(props) {
         <span id="findPW">비밀번호 찾기</span>
         <span id="signUp">회원가입</span>
       </div>
+
       <div className="socials">
         <hr />
         <span>간편 로그인</span>
