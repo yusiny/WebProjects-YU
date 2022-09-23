@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function LoginModal(props) {
   function closeModal() {
@@ -6,6 +6,12 @@ export default function LoginModal(props) {
   }
 
   const [showPw, setShowPw] = useState(true);
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+
+  useEffect(() => {
+    passwordRef.current.type = showPw ? "text" : "password";
+  }, [showPw]);
 
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
@@ -38,6 +44,8 @@ export default function LoginModal(props) {
     }
   };
   useEffect(() => {
+    // if (!emailValid) emailRef.style.border;
+
     if (emailValid && pwValid) {
       setValid(false);
       return;
@@ -73,12 +81,19 @@ export default function LoginModal(props) {
             placeholder="비밀번호"
             value={pw}
             onChange={handlePw}
+            ref={passwordRef}
           ></input>
           {showPw && (
             <img src="/assets/ic_eye_on.svg" onClick={() => setShowPw(false)} />
           )}
           {!showPw && (
             <img src="/assets/ic_eye_off.svg" onClick={() => setShowPw(true)} />
+          )}
+        </div>
+
+        <div className="errorMessageWrap">
+          {!pwValid && pw.length > 0 && (
+            <div>영문, 숫자, 특수문자 포함 8자 이상 입력해 주세요.</div>
           )}
         </div>
 

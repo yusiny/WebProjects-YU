@@ -39,7 +39,6 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,
@@ -155,4 +154,12 @@ button {
 
 #root {
   width: 100%;
+}
+
+.className {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.className::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }

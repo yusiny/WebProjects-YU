@@ -1,0 +1,154 @@
+.lecture_top {
+  padding: 40px 0;
+  background: #002333;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.flex-row-center {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thumbnail {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+  width: 440px;
+  height: 286px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail-button,
+.thumbnail-button span {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.47;
+  letter-spacing: -0.3px;
+}
+
+.thumbnail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-bottom: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid #00c471;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+  background: #1b1c1d;
+  cursor: pointer;
+}
+
+.thumbnail-button span:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+/* 우측 */
+#info_right {
+  flex-basis: 58.33333333%;
+  max-width: 58.33333333%;
+  padding: 0 42px;
+  color: white;
+}
+
+.info_breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.info_breadcrumb span {
+  font-weight: 400;
+  line-height: 1.43;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  white-space: pre;
+}
+
+.info_title {
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 26px;
+
+  margin-bottom: 40px;
+}
+
+.info_star {
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+}
+
+.info_stars > img {
+  width: 14px;
+  height: 14px;
+}
+
+.info_instructor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.info_tags {
+  display: flex;
+  align-items: center;
+}
+
+.button_tag {
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  font-size: 12px;
+  font-weight: 500;
+
+  margin-right: 4px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background-color: #173f51;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.button_tag:hover {
+  background-color: #254f63;
+}
