@@ -77,8 +77,67 @@ export default function () {
           </div>
         </div>
       </section>
-      <section className="lecture_middle"></section>
-      <section className="lecture_bottom"></section>
+
+      <section className="lecture_middle">
+        <div className="middle_tab_bar">
+          <div className="wrapper">
+            <span className="tab tab_active">강의소개</span>
+            <span className="tab">커리큘럼</span>
+            <span className="tab">
+              수강평
+              <span style={{ fontSize: "11px", color: "#00c471" }}>7</span>
+            </span>
+            <span className="tab">수강전 문의</span>
+            <span className="tab">커뮤니티</span>
+            <span className="tab">새소식</span>
+          </div>
+        </div>
+        <div className="middle_contents">
+          <div className="contents">
+            <div className="contents_title">
+              <strong>중급자</strong>를 위해 준비한 <br />{" "}
+              <strong>[모바일 앱 개발] 강의입니다.</strong>
+            </div>
+            <div className="contents_content">
+              로컬 DB를 이용한 캐싱 기법, CSV 파싱, Canvas를 활용한 커스텀
+              드로잉을 포함한 앱을 클린 아키텍처로 구현하는 예제를 경험할 수
+              있습니다.
+            </div>
+          </div>
+
+          <div className="buying_bar">
+            <div className="interest">
+              <img src="https://cdn.inflearn.com/assets/images/corporations/kakaobank.png" />
+              <div>
+                <div className="interest_title">
+                  <div>카카오</div>
+                </div>
+                <div className="interest_msg">
+                  지금 이 회사에 관심있는 사람들도 듣는 중!
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div>top</div>
+              <div>bottom</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="lecture_bottom">
+        <div className="wrapper">
+          <div className="bottom_title">
+            <u>오준석님의 다른 강의</u>
+            <img src="/assets/ic_shortcut.svg" />
+          </div>
+          <div className="bottom_content">
+            지식공유자님의 다른 강의를 만나보세요!
+          </div>
+          <div>강의들</div>
+        </div>
+      </section>
     </>
   );
 }
