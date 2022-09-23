@@ -1,9 +1,9 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import Home from "./pages/home/Home";
 import FloatingButton from "./components/FloatingButton";
-import Lecture from "./pages/lecture/Lecture";
+import Lecture from "./components/Lecture";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Header />
       <Nav />
 
-      {/* <Home /> */}
-      <Lecture />
+      <Home />
+      {/* <Lecture /> */}
 
       <Footer />
       <FloatingButton />

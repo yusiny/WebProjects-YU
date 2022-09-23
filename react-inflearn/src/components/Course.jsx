@@ -1,9 +1,9 @@
 import React from "react";
-import Lecture from "./Lecture";
 
-import "../styles/lecture.css";
-import Roadmap from "./Roadmap";
-import Read from "./Read";
+import "../styles/lecturecard.css";
+import LectureCard from "./LectureCard";
+import RoadmapCard from "./RoadmapCard";
+import ReadCard from "./ReadCard";
 
 export default function Course({ information }) {
   return (
@@ -22,14 +22,17 @@ export default function Course({ information }) {
           switch (information.type) {
             case "A":
             case "B":
-              return <Lecture lecture={lecture} />;
+              return <LectureCard lecture={lecture} />;
             case "C":
               return (
-                <Roadmap title={lecture.title} image_url={lecture.image_url} />
+                <RoadmapCard
+                  title={lecture.title}
+                  image_url={lecture.image_url}
+                />
               );
             case "D":
               return (
-                <Read
+                <ReadCard
                   title={lecture.title}
                   desc={lecture.desc}
                   image_url={lecture.image_url}

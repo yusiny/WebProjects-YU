@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Roadmap({ title, image_url }) {
+export default function RoadmapCard({ title, image_url }) {
   return (
     <div class="roadmap">
       <img src={image_url} />

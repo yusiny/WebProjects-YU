@@ -55,6 +55,8 @@
 /*  */
 #main_banner_controls {
   height: 64px;
+  display: flex;
+  align-items: center;
 }
 
 .main_banner_indicator_wrapper {

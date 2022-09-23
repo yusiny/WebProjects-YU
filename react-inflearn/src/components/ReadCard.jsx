@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Read({ title, desc, image_url }) {
+export default function ReadCard({ title, desc, image_url }) {
   return (
     <div class="read">
       <img src={image_url} />
