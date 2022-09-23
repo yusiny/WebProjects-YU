@@ -1,0 +1,40 @@
+.top {
+  padding: 1rem 22px;
+  background-image: url(https://cdn.inflearn.com/public/files/posts/8b716f4c-ad1f-49cd-a230-e12c83108b75/roadmap-banner-jpg.jpg);
+  background-size: cover;
+  background-position: 100% 30%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top > .wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.roadmap_detail_title {
+  width: calc(100% - 360px);
+  line-height: 1.5;
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+
+  padding: 0;
+}
+
+.content {
+  margin-top: 0.5rem;
+  margin-bottom: 8px;
+  line-height: 1.69;
+  color: #495057;
+  font-size: 16px;
+}
+
+.content img {
+  width: 947px;
+}
