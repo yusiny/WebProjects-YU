@@ -1,14 +1,18 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 import "../styles/lecture.css";
 export default function () {
+  const { state } = useLocation();
+  console.log(state);
+
   return (
     <>
       <section className="lecture_top">
         <div className="wrapper">
           <div className="flex-row-center">
             <div id="info_left" className="thumbnail">
-              <img src="https://cdn.inflearn.com/public/courses/329235/cover/02b457b5-56de-4797-9a3e-17ba2470ae85/329235-eng.png" />
+              <img src={state.image_url} />
 
               <button className="thumbnail-button">
                 <span style={{ marginRight: "8px" }}>
@@ -34,9 +38,7 @@ export default function () {
                 <span> 모바일 앱 개발</span>
               </div>
 
-              <div className="info_title">
-                Flutter 실전 앱 개발 - 미국 주식 앱 (with 클린 아키텍처)
-              </div>
+              <div className="info_title">{state.title}</div>
 
               <div className="info_star">
                 <span className="info_stars">
@@ -50,14 +52,14 @@ export default function () {
                   (5.0)
                 </strong>
                 <span>
-                  7개의 수강평 ∙ <strong>80명</strong>의 수강생
+                  {state.ratings}개의 수강평 ∙ <strong>80명</strong>의 수강생
                 </span>
               </div>
 
               <div className="info_instructor">
                 <img src="/assets/ic_instructor.svg" />
                 <strong style={{ marginLeft: "6px", marginRight: "2px" }}>
-                  <u>오준석</u>
+                  <u>{state.producer}</u>
                 </strong>
                 <img src="/assets/ic_crown.svg" />
               </div>
@@ -68,9 +70,9 @@ export default function () {
                   style={{ marginRight: "6px" }}
                 />
                 <span>
-                  <button className="button_tag">Flutter</button>
-                  <button className="button_tag">IOS</button>
-                  <button className="button_tag">Android</button>
+                  {state.tags.map((tag) => {
+                    return <button className="button_tag">{tag.name}</button>;
+                  })}
                 </span>
               </div>
             </div>
@@ -129,7 +131,7 @@ export default function () {
       <section className="lecture_bottom">
         <div className="wrapper">
           <div className="bottom_title">
-            <u>오준석님의 다른 강의</u>
+            <u>{state.producer}님의 다른 강의</u>
             <img src="/assets/ic_shortcut.svg" />
           </div>
           <div className="bottom_content">

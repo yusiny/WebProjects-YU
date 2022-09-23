@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LectureCard({ lecture }) {
   const [back, setBack] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
       class="lecture"
       onMouseEnter={() => setBack(true)}
       onMouseLeave={() => setBack(false)}
+      onClick={() => navigate("/lecture", { state: lecture })}
     >
       <div class="lecture_front">
         <img src={lecture.image_url} />

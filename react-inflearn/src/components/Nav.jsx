@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../styles/nav.css";
 import Modal from "./Modal";
 import LoginModal from "./LoginModal";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [login, setLogin] = useState(false);
@@ -17,21 +18,21 @@ export default function Nav() {
 
           <div id="nav_bar">
             <div id="nav_bar_left">
-              <a href="/" class="a_nav">
+              <Link to="/lectures" class="a_nav">
                 강의
-              </a>
-              <a href="/" class="a_nav">
+              </Link>
+              <Link to="/roadmaps" class="a_nav">
                 로드맵
-              </a>
-              <a href="/" class="a_nav">
+              </Link>
+              <Link to="/mentorings" class="a_nav">
                 멘토링
-              </a>
-              <a href="/" class="a_nav">
+              </Link>
+              <Link to="/communities" class="a_nav">
                 커뮤니티
-              </a>
-              <a href="/" class="a_nav">
+              </Link>
+              <Link to="/inflearns" class="a_nav">
                 인프런
-              </a>
+              </Link>
             </div>
 
             <div id="nav_bar_right">
