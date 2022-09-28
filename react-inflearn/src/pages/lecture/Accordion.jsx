@@ -41,7 +41,7 @@ export default function Accordion({ isToggle, title, menus }) {
 
 const AccordionDefault = styled.div`
   .accordion-header {
-    width: 100%;
+    width: 150px;
     border: 1px solid #e4e4e4;
     color: #595959;
     background: #fafafa;

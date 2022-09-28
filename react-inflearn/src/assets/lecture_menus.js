@@ -109,3 +109,18 @@ export const menus = [
     ],
   },
 ];
+
+export const tags = [
+  "Python",
+  "MS-Office",
+  "JavaScript",
+  "HTML/CSS",
+  "Java",
+  "Excel",
+  "Android",
+  "머신러닝",
+  "딥러닝",
+  "React",
+  "IOS",
+  "업무 생산성",
+];
