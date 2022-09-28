@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 export default function LectureCard({ lecture }) {
   const [back, setBack] = useState(false);
   const navigate = useNavigate();
-
   return (
     <div
       class="lecture"

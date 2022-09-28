@@ -1,29 +1,24 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+
 import { menus, tags } from "../../assets/lecture_menus";
+import { lectures } from "../../assets/courses";
+
 import Accordion from "./Accordion";
-import { faTimes, faEllipsis } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
 import OrderbySelect from "./OrderbySelect";
 
+import { faTimes, faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import LectureCard from "../../components/LectureCard";
+
 export default function Lecture() {
-  const orderbyRef = useRef(null);
-  const [showOrderBy, setShowOrderBy] = useState(false);
-  const setOrderby = (boolean) => {
-    if (boolean) {
-      orderbyRef.toggle();
-    } else {
-      orderbyRef.hide();
-    }
-  };
+  console.log(lectures);
 
   return (
     <section className="section_lecture">
       <Container>
         <Sidebar>
           {menus.map((accordion) => {
-            console.log(accordion);
             return (
               <Accordion
                 isToggle={accordion.isToggle}
@@ -89,8 +84,41 @@ export default function Lecture() {
 
             <OrderbySelect />
           </Options>
+
+          <LectureWrapper>
+            {lectures[0].map((lecture) => {
+              return <LectureCard lecture={lecture} />;
+            })}
+            {lectures[1].map((lecture) => {
+              return <LectureCard lecture={lecture} />;
+            })}
+            {lectures[2].map((lecture) => {
+              return <LectureCard lecture={lecture} />;
+            })}
+          </LectureWrapper>
         </LectureBody>
       </Container>
+      <Footer>
+        <div className="wrapper">
+          <div className="footer-div">
+            <div className="footer-title">지식 공유자 되기</div>
+            <div className="footer-desc">
+              많은 사람들에게 배움의 기회를 주고, <br /> 경제적 보상을
+              받아보세요.
+            </div>
+            <ButtonG>지식공유참여</ButtonG>
+          </div>
+          <div className="footer-div">
+            <div className="footer-title">기업 공유를 위한 인프런</div>
+            <div className="footer-desc">
+              "인프런 비즈니스"를 통해 모든 팀원이 인프런의 강의를
+              <br />
+              자유롭게 학습하는 환경을 제공하세요.
+            </div>
+            <ButtonG>인프런 비즈니스</ButtonG>
+          </div>
+        </div>
+      </Footer>
     </section>
   );
 }
@@ -100,7 +128,6 @@ const Container = styled.div`
   background: #fff;
   max-width: 1180px;
   margin: 0 auto;
-  border: 1px solid red;
 
   display: flex;
   flex-direction: row;
@@ -121,7 +148,6 @@ const Sidebar = styled.aside`
 `;
 
 const LectureBody = styled.div`
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -261,7 +287,7 @@ const Options = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 24px 12px 16px;
+  margin: 24px 0 16px;
 
   .filter {
     display: flex;
@@ -354,4 +380,58 @@ const Options = styled.div`
   }
 `;
 
-const LectureWrapper = styled.div``;
+const LectureWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .lecture {
+    width: 24%;
+  }
+`;
+
+const PaginationWrapper = styled.div``;
+
+const Footer = styled.div`
+  background: #f3f4f7;
+
+  .wrapper {
+    display: flex;
+    padding: 96px 0;
+    max-width: 1152px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  .footer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .footer-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 24px;
+  }
+`;
+
+const ButtonG = styled.button`
+  background: #1dc078;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 2px;
+  padding: 8px 16px;
+  border: none;
+
+  cursor: pointer;
+  justify-content: center;
+`;

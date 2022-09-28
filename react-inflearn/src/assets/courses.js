@@ -399,3 +399,9 @@ export const courses = [
   course_read,
   course_new,
 ];
+
+export const lectures = [
+  course_free.contents,
+  course_starter.contents,
+  course_new.contents,
+];
