@@ -27,6 +27,7 @@ export default function () {
 }
 
 const SelectBox = styled.div`
+  z-index: 2;
   position: relative;
   padding: 0 8px;
   border: 1px solid #abb0b5;
@@ -36,6 +37,10 @@ const SelectBox = styled.div`
   justify-content: center;
   align-items: center;
   height: 40px;
+
+  &:hover {
+    border-color: #616568;
+  }
 `;
 
 const Label = styled.label`

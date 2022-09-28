@@ -10,6 +10,7 @@ import OrderbySelect from "./OrderbySelect";
 import { faTimes, faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LectureCard from "../../components/LectureCard";
+import FilterSelect from "./FilterSelect";
 
 export default function Lecture() {
   console.log(lectures);
@@ -60,27 +61,7 @@ export default function Lecture() {
           </Tags>
 
           <Options>
-            <div className="filter">
-              <span className="filter-left">
-                <img src="/assets/ic_filter.svg" /> 필터
-              </span>
-
-              <div className="filter-right">
-                <span className="filter-item">유료</span>
-                <img src="/assets/ic_dot.svg" />
-                <span className="filter-item">무료</span>
-                <img src="/assets/ic_dot.svg" />
-                <span className="filter-item">할인중</span>
-
-                <span className="divider"></span>
-
-                <span className="filter-item">입문</span>
-                <img src="/assets/ic_dot.svg" />
-                <span className="filter-item">초급</span>
-                <img src="/assets/ic_dot.svg" />
-                <span className="filter-item">중급이상</span>
-              </div>
-            </div>
+            <FilterSelect />
 
             <OrderbySelect />
           </Options>
@@ -98,6 +79,7 @@ export default function Lecture() {
           </LectureWrapper>
         </LectureBody>
       </Container>
+
       <Footer>
         <div className="wrapper">
           <div className="footer-div">
@@ -288,56 +270,6 @@ const Options = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 24px 0 16px;
-
-  .filter {
-    display: flex;
-    padding: 10px 12px 10px 14px;
-    border: 1px solid #abb0b5;
-    border-radius: 4px;
-    background-color: #fff;
-  }
-
-  .filter-left {
-    display: flex;
-    align-items: center;
-    color: #3e4042;
-    line-height: 1.43;
-    font-size: 14px;
-  }
-
-  img {
-    box-sizing: content-box;
-    font-size: inherit;
-    width: 1rem;
-    height: 1rem;
-    line-height: 1;
-    margin-right: 3px;
-  }
-
-  .filter-right {
-    display: flex;
-    align-items: center;
-    margin-left: 12px;
-  }
-
-  .filter-item {
-    font-weight: 400;
-    line-height: 1.43;
-    letter-spacing: -0.3px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #abb0b5;
-  }
-
-  .divider {
-    display: inline-block;
-    margin: 0 6px;
-    height: 12px;
-    width: 1px;
-    background-color: #e9ebee;
-    margin-left: 6px;
-    margin-right: 6px;
-  }
 
   .orderBy {
     position: relative;

@@ -80,7 +80,6 @@ const AccordionWithToggle = styled(AccordionDefault)`
   }
 
   .accordion-content {
-    width: 100%;
     display: inline-flex;
     text-decoration: none;
     white-space: nowrap;
