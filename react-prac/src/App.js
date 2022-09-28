@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Movie from "./components/Movie";
-import App1Movie from "./App1Movie";
+import App1Movie from "./components/MovieDemo";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 import Header from "./components/Header";
+import Radio from "./components/Radio";
 
 import "./index.css";
 
@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/movie" element={<App1Movie />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/radio" element={<Radio />} />
 
           <Route path="/*" element={<NotFound />} />
         </Routes>

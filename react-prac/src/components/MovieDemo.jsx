@@ -1,9 +1,9 @@
-import Movie from "./components/Movie";
-import { dummy } from "./movieDummy";
+import Movie from "./Movie";
+import { dummy } from "../movieDummy";
 
 function App() {
   return (
-    <>
+    <div className="movie-demo">
       <div className="app-container">
         {dummy.results.map((item) => {
           return (
@@ -15,7 +15,7 @@ function App() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 
