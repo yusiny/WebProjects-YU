@@ -127,6 +127,10 @@ const Sidebar = styled.aside`
   width: fit-content;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 const LectureBody = styled.div`
@@ -253,6 +257,10 @@ const Tag = styled.button`
 
   font-weight: 400;
   font-size: 16px;
+
+  @media screen and (max-width: 1020px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const TagActive = styled(Tag)`
@@ -270,6 +278,11 @@ const Options = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 24px 0 16px;
+
+  @media screen and (max-width: 1020px) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
   .orderBy {
     position: relative;
@@ -314,11 +327,24 @@ const Options = styled.div`
 
 const LectureWrapper = styled.div`
   width: 100%;
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
 
-  .lecture {
-    width: 24%;
+  .lecture_root {
+    width: 25%;
+  }
+
+  @media screen and (min-width: 1020px) and (max-width: 1200px) {
+    .lecture_root {
+      width: 33.33333%;
+    }
+  }
+
+  @media screen and (min-width: 760px) and (max-width: 1020px) {
+    .lecture_root {
+      width: 50%;
+    }
   }
 `;
 

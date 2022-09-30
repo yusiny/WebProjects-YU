@@ -162,6 +162,11 @@ const Filter = styled.div`
     margin-left: 6px;
     margin-right: 6px;
   }
+
+  @media screen and (max-width: 1020px) {
+    width: 95%;
+    margin: 0 auto;
+  }
 `;
 
 const SelectOptions = styled.div`

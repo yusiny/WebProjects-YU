@@ -35,14 +35,19 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 6px 0;
+  margin-bottom: 40px;
 }
 
 /* Lecture */
+.lecture_root {
+  box-sizing: border-box;
+  width: 25%;
+  padding: 0.75rem;
+}
+
 .lecture {
-  width: 231.2px;
-  margin-right: 6px;
+  height: 100%;
   position: relative;
-  margin-bottom: 40px;
 }
 
 .lecture img,

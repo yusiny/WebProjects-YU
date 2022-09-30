@@ -41,6 +41,11 @@ const SelectBox = styled.div`
   &:hover {
     border-color: #616568;
   }
+
+  @media screen and (max-width: 1020px) {
+    margin: 5px 0;
+    border: none;
+  }
 `;
 
 const Label = styled.label`

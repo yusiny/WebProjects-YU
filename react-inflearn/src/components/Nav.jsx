@@ -275,11 +275,11 @@ const NavBottom = styled.div`
   box-shadow: 0 -2px 4px 0 rgb(33 37 41 / 8%);
   z-index: 75;
 
-  @media screen and (max-width: 1010px) {
+  @media screen and (max-width: 1200px) {
     display: flex;
   }
 
-  @media screen and (min-width: 1010px) {
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 
