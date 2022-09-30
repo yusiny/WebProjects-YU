@@ -102,7 +102,7 @@ h1 {
   z-index: 100;
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1200px) {
   .floating-button {
     bottom: 70px;
   }

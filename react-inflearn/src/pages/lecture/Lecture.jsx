@@ -341,7 +341,7 @@ const LectureWrapper = styled.div`
     }
   }
 
-  @media screen and (min-width: 760px) and (max-width: 1020px) {
+  @media screen and (max-width: 1020px) {
     .lecture_root {
       width: 50%;
     }
