@@ -8,53 +8,102 @@ import {
   faFacebookF,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 export default function Footer() {
+  const [inflearnState, setInflearnState] = useState(false);
+  const [customerState, setCustomerState] = useState(false);
+  const [applyState, setApplyState] = useState(false);
+
   return (
     <footer>
       <div class="wrapper">
         <div id="footer_menu_wrapper">
-          <div class="footer_menu">
-            <h6>인프런</h6>
-            <a>공지사항</a>
-            <a>인프런 소개</a>
-            <a>인프랩 실Log</a>
-            <a>인프랩 채용</a>
+          <div
+            class="footer_menu"
+            onClick={() => setInflearnState(!inflearnState)}
+          >
+            <div className="footer_menu_title">
+              인프런
+              <img
+                className={
+                  inflearnState
+                    ? "footer_menu_toggle_open"
+                    : "footer_menu_toggle"
+                }
+                src="/assets/ic_toggle_white.svg"
+              />
+            </div>
+            <div className="footer_menu_sublist">
+              <a>공지사항</a>
+              <a>인프런 소개</a>
+              <a>인프랩 실Log</a>
+              <a>인프랩 채용</a>
+            </div>
           </div>
 
-          <div class="footer_menu">
-            <h6>고객센터</h6>
-            <a>자주묻는 질문</a>
-            <a>수료증 확인</a>
-            <a>이용약관</a>
-            <a>개인정보취급방침</a>
-            <a>저작권 신고센터</a>
+          <div
+            class="footer_menu"
+            onClick={() => setCustomerState(!customerState)}
+          >
+            <div className="footer_menu_title">
+              고객센터
+              <img
+                className={
+                  customerState
+                    ? "footer_menu_toggle_open"
+                    : "footer_menu_toggle"
+                }
+                src="/assets/ic_toggle_white.svg"
+              />
+            </div>
+            <div className="footer_menu_sublist">
+              <a>자주묻는 질문</a>
+              <a>수료증 확인</a>
+              <a>이용약관</a>
+              <a>개인정보취급방침</a>
+              <a>저작권 신고센터</a>
+            </div>
           </div>
 
-          <div class="footer_menu">
-            <h6>신청하기</h6>
-            <a>지식공유참여</a>
-            <a>멘토링 소개</a>
-            <a>인프런 비즈니스</a>
-            <a>인프런 X 대학교</a>
-            <a>인프런 X AWS 제휴</a>
+          <div class="footer_menu" onClick={() => setApplyState(!applyState)}>
+            <div className="footer_menu_title">
+              신청하기
+              <img
+                className={
+                  applyState ? "footer_menu_toggle_open" : "footer_menu_toggle"
+                }
+                src="/assets/ic_toggle_white.svg"
+              />
+            </div>
+            <div className="footer_menu_sublist">
+              <a>지식공유참여</a>
+              <a>멘토링 소개</a>
+              <a>인프런 비즈니스</a>
+              <a>인프런 X 대학교</a>
+              <a>인프런 X AWS 제휴</a>
+            </div>
           </div>
 
-          <div class="footer_menu">
-            <h6>학습하기</h6>
-            <a>IT 프로그래밍</a>
-            <a>크리에이티브</a>
-            <a>멉무스킬</a>
-            <a>수강코드 등록</a>
-            <a>포인트코드 등록</a>
+          <div class="footer_menu" id="menu_study">
+            <div className="footer_menu_title">학습하기</div>
+            <div className="footer_menu_sublist">
+              <a>IT 프로그래밍</a>
+              <a>크리에이티브</a>
+              <a>멉무스킬</a>
+              <a>수강코드 등록</a>
+              <a>포인트코드 등록</a>
+            </div>
           </div>
 
-          <div class="footer_menu">
-            <h6>커뮤니티</h6>
-            <a>학습로드맵</a>
-            <a>질문 {"&"} 답변</a>
-            <a>수강평 모아보기</a>
-            <a>강의 · 기능요청</a>
+          <div class="footer_menu " id="menu_community">
+            <div className="footer_menu_title">커뮤니티</div>
+            <div className="footer_menu_sublist">
+              <a>학습로드맵</a>
+              <a>질문 {"&"} 답변</a>
+              <a>수강평 모아보기</a>
+              <a>강의 · 기능요청</a>
+            </div>
           </div>
         </div>
 
