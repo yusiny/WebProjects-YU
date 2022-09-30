@@ -34,7 +34,7 @@ export default function () {
           <span className="filter-item">중급이상</span>
         </div>
 
-        <SelectOptions show="true">
+        <SelectOptions>
           <OptionArea>{filters[0].title}</OptionArea>
 
           <Option>
@@ -164,7 +164,7 @@ const Filter = styled.div`
   }
 `;
 
-const SelectOptions = styled.ul`
+const SelectOptions = styled.div`
   width: 100%;
   position: absolute;
   list-style: none;
@@ -173,6 +173,7 @@ const SelectOptions = styled.ul`
   padding: 20px 16px;
   overflow: hidden;
   max-height: ${(props) => (props.show ? "none" : "0")};
+  display: none;
 
   background-color: white;
   border-radius: 0 0 4px 4px;
