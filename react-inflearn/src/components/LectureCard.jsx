@@ -1,9 +1,37 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { bookmarkState } from "../recoil/Bookmark";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as faHeartR } from "@fortawesome/free-regular-svg-icons";
 
 export default function LectureCard({ lecture }) {
+  const [bookmark, setBookmark] = useRecoilState(bookmarkState);
+  const addBookmark = (e) => {
+    e.stopPropagation();
+
+    setBookmark((prev) => {
+      const variable = { ...prev };
+
+      if (!isBookmarked) {
+        variable.count = prev.count + 1;
+        variable.lectures = [...prev.lectures, lecture];
+      } else {
+        variable.count = prev.count - 1;
+      }
+
+      setIsBookmarked(!isBookmarked);
+
+      return { ...variable };
+    });
+  };
+
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
   const [back, setBack] = useState(false);
   const navigate = useNavigate();
+
   return (
     <div className="lecture_root">
       <div
@@ -64,8 +92,19 @@ export default function LectureCard({ lecture }) {
                 <i class="fa-solid fa-cart-plus"></i>
                 <span class="tooltiptext"> 수강바구니에 추가 </span>
               </div>
-              <div class="tooltip tooltip_like">
-                <img src="/assets/ic_heart.svg" />
+              <div class="tooltip tooltip_like" onClick={(e) => addBookmark(e)}>
+                {isBookmarked ? (
+                  <FontAwesomeIcon
+                    icon={faHeart}
+                    style={{ color: "#e94e58", fontSize: "16px" }}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faHeartR}
+                    style={{ fontSize: "16px" }}
+                  />
+                )}
+
                 <span class="tooltiptext"> 좋아요에 추가 </span>
               </div>
               <div class="tooltip tooltip_plus">

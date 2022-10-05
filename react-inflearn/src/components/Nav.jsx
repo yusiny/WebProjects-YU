@@ -21,11 +21,16 @@ import {
   faUser as faUserR,
   faBookmark as faBookmarkR,
 } from "@fortawesome/free-regular-svg-icons";
+import { useRecoilValue } from "recoil";
+import { bookmarkState } from "../recoil/Bookmark";
 
 export default function Nav() {
   const [login, setLogin] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+
+  const bookmark = useRecoilValue(bookmarkState);
+  console.log(bookmark);
 
   return (
     <>
@@ -89,7 +94,9 @@ export default function Nav() {
                   )}
                 </a>
 
-                <div className="nav_bookmark_count">1</div>
+                {bookmark.count >= 1 && (
+                  <div className="nav_bookmark_count">{bookmark.count}</div>
+                )}
               </NavItem>
               <NavItem className="nav_item">
                 <a className="nav_item_hoverble" id="nav_notification">
