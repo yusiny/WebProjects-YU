@@ -18,33 +18,6 @@ SwiperCore.use([Autoplay]);
 export default function MainBannerSlider() {
   const swiperRef = React.useRef(null);
   const [pageIdx, setPageIdx] = useState(0);
-  const [pageChecked, setPageChecked] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-  //const pageChecked = [false, false, false, false, false, false, false];
-
-  const changePageIdx = (idx) => {
-    setPageChecked(() => {
-      pageChecked.map((item) => {
-        item = false;
-      });
-
-      pageChecked[idx - 1] = true;
-
-      return pageChecked;
-    });
-
-    setPageIdx(idx);
-
-    console.log(idx);
-    console.log(pageChecked);
-  };
 
   const params = {
     direction: "horizontal",
@@ -54,7 +27,7 @@ export default function MainBannerSlider() {
       disableOnInteraction: false,
     },
     onSlideChange: (swiperCore) => {
-      changePageIdx(swiperCore.realIndex + 1);
+      setPageIdx(swiperCore.realIndex + 1);
     },
   };
 
@@ -144,49 +117,49 @@ export default function MainBannerSlider() {
           <div id="main_banner_buttons_wrapper">
             <span
               className={`main_banner_button ${
-                pageChecked[0] && "main_banner_button_checked"
+                pageIdx == 0 && "main_banner_button_checked"
               }`}
             >
               Top 50 👑
             </span>
             <span
               className={`main_banner_button ${
-                pageChecked[1] && "main_banner_button_checked"
+                pageIdx == 1 && "main_banner_button_checked"
               }`}
             >
               왕초보 모여라 😎
             </span>
             <span
               className={`main_banner_button ${
-                pageChecked[2] && "main_banner_button_checked"
+                pageIdx == 2 && "main_banner_button_checked"
               }`}
             >
               지식공유신청
             </span>
             <span
               className={`main_banner_button ${
-                pageChecked[3] && "main_banner_button_checked"
+                pageIdx == 3 && "main_banner_button_checked"
               }`}
             >
               신규 강의 🎁
             </span>
             <span
               className={`main_banner_button ${
-                pageChecked[4] && "main_banner_button_checked"
+                pageIdx == 4 && "main_banner_button_checked"
               }`}
             >
               입문 로드맵
             </span>
             <span
               className={`main_banner_button ${
-                pageChecked[5] && "main_banner_button_checked"
+                pageIdx == 5 && "main_banner_button_checked"
               }`}
             >
               인프런은 🌱
             </span>
             <span
               className={`main_banner_button ${
-                pageChecked[6] && "main_banner_button_checked"
+                pageIdx == 6 && "main_banner_button_checked"
               }`}
             >
               인프런 동료찾기

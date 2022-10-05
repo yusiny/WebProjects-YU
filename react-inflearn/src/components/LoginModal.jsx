@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useSetRecoilState } from "recoil";
+import { user } from "../assets/user";
+import { userState } from "../recoil/User";
 
 export default function LoginModal(props) {
   function closeModal() {
@@ -44,8 +47,6 @@ export default function LoginModal(props) {
     }
   };
   useEffect(() => {
-    // if (!emailValid) emailRef.style.border;
-
     if (emailValid && pwValid) {
       setValid(false);
       return;
@@ -53,6 +54,26 @@ export default function LoginModal(props) {
 
     setValid(true);
   }, [emailValid, pwValid]);
+
+  const setUser = useSetRecoilState(userState);
+  const login = () => {
+    if (email == user.email && pw == user.PW) {
+      // 로그인 성공
+      setUser((prev) => {
+        const variable = { ...prev };
+        variable.isLogin = true;
+        variable.username = email;
+
+        return { ...variable };
+      });
+
+      alert(email + " 계정으로 로그인되었습니다.");
+      closeModal();
+    } else {
+      // 로그인 실패
+      alert("존재하지 않는 회원입니다.");
+    }
+  };
 
   return (
     <div id="login-modal">
@@ -98,7 +119,7 @@ export default function LoginModal(props) {
         </div>
 
         <div>
-          <button className="loginButton" disabled={valid}>
+          <button className="loginButton" disabled={valid} onClick={login}>
             로그인
           </button>
         </div>

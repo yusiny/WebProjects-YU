@@ -23,14 +23,15 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { useRecoilValue } from "recoil";
 import { bookmarkState } from "../recoil/Bookmark";
+import { userState } from "../recoil/User";
 
 export default function Nav() {
   const [login, setLogin] = useState(false);
   const [isHover, setIsHover] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const isLogin = useRecoilValue(userState);
 
   const bookmark = useRecoilValue(bookmarkState);
-  console.log(bookmark);
+  console.log(isLogin);
 
   return (
     <>
@@ -69,45 +70,52 @@ export default function Nav() {
                 />
               </div>
 
-              <Button onClick={() => setLogin(!login)}>로그인</Button>
-              <ButtonOrange class="button_orange"> 회원가입 </ButtonOrange>
+              {!isLogin.isLogin && (
+                <>
+                  <Button onClick={() => setLogin(!login)}>로그인</Button>
+                  <ButtonOrange class="button_orange"> 회원가입 </ButtonOrange>
+                </>
+              )}
 
-              <ButtonGreen class="button_green">
-                <FontAwesomeIcon icon={faPencil} />
-                <span>최근강의</span>
-              </ButtonGreen>
+              {isLogin.isLogin && (
+                <>
+                  <ButtonGreen class="button_green">
+                    <FontAwesomeIcon icon={faPencil} />
+                    <span>최근강의</span>
+                  </ButtonGreen>
+                  <NavItem className="nav_item">
+                    <a
+                      className="nav_item_hoverble"
+                      id="nav_bookmark"
+                      onMouseEnter={() => setIsHover(true)}
+                      onMouseLeave={() => setIsHover(false)}
+                    >
+                      {!isHover ? (
+                        <FontAwesomeIcon icon={faBookmarkR} />
+                      ) : (
+                        <FontAwesomeIcon
+                          icon={faBookmark}
+                          style={{ color: "#00c471" }}
+                        />
+                      )}
+                    </a>
 
-              <NavItem className="nav_item">
-                <a
-                  className="nav_item_hoverble"
-                  id="nav_bookmark"
-                  onMouseEnter={() => setIsHover(true)}
-                  onMouseLeave={() => setIsHover(false)}
-                >
-                  {!isHover ? (
-                    <FontAwesomeIcon icon={faBookmarkR} />
-                  ) : (
-                    <FontAwesomeIcon
-                      icon={faBookmark}
-                      style={{ color: "#00c471" }}
-                    />
-                  )}
-                </a>
-
-                {bookmark.count >= 1 && (
-                  <div className="nav_bookmark_count">{bookmark.count}</div>
-                )}
-              </NavItem>
-              <NavItem className="nav_item">
-                <a className="nav_item_hoverble" id="nav_notification">
-                  <FontAwesomeIcon icon={faBellR} />
-                </a>
-              </NavItem>
-              <NavItem className="nav_item" id="nav_user">
-                <a className="nav_item_hoverble">
-                  <FontAwesomeIcon icon={faUserR} />
-                </a>
-              </NavItem>
+                    {bookmark.count >= 1 && (
+                      <div className="nav_bookmark_count">{bookmark.count}</div>
+                    )}
+                  </NavItem>
+                  <NavItem className="nav_item">
+                    <a className="nav_item_hoverble" id="nav_notification">
+                      <FontAwesomeIcon icon={faBellR} />
+                    </a>
+                  </NavItem>
+                  <NavItem className="nav_item" id="nav_user">
+                    <a className="nav_item_hoverble">
+                      <FontAwesomeIcon icon={faUserR} />
+                    </a>
+                  </NavItem>
+                </>
+              )}
             </div>
           </div>
         </NavDesktop>
