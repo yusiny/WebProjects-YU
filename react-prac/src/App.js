@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Radio from "./components/Radio";
 
 import "./index.css";
+import Redux from "./components/7_Redux";
+import Recoil from "./components/Recoil";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/movie" element={<App1Movie />} />
           <Route path="/login" element={<Login />} />
           <Route path="/radio" element={<Radio />} />
+          <Route path="/redux" element={<Redux />} />
+          <Route path="/recoil" element={<Recoil />} />
 
           <Route path="/*" element={<NotFound />} />
         </Routes>

@@ -11,9 +11,11 @@ export default function () {
     setCheckEl(Number(e.target.value));
   };
 
+  const [isShowOptions, setShowOptions] = useState(false);
+
   return (
     <>
-      <Filter>
+      <Filter onClick={() => setShowOptions(!isShowOptions)}>
         <span className="filter-left">
           <img src="/assets/ic_filter.svg" /> 필터
         </span>
@@ -34,7 +36,7 @@ export default function () {
           <span className="filter-item">중급이상</span>
         </div>
 
-        <SelectOptions>
+        <SelectOptions show={isShowOptions}>
           <OptionArea>{filters[0].title}</OptionArea>
 
           <Option>
@@ -175,10 +177,9 @@ const SelectOptions = styled.div`
   list-style: none;
   top: 41px;
   left: 0;
-  padding: 20px 16px;
+  padding: 10px 16px;
   overflow: hidden;
-  max-height: ${(props) => (props.show ? "none" : "0")};
-  display: none;
+  display: ${(props) => (props.show ? "0" : "none")};
 
   background-color: white;
   border-radius: 0 0 4px 4px;

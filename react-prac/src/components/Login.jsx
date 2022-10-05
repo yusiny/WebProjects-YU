@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { loginAction } from "../reducers/user";
 
 const User = {
   email: "test@gmail.com",
@@ -47,12 +49,25 @@ export default function Login() {
     setNotAllow(true);
   }, [emailValid, pwValid]);
 
+  const dispatch = useDispatch();
+  const onClickLogin = () => {
+    dispatch(
+      loginAction({
+        email: email,
+        pw: pw,
+      })
+    );
+
+    alert("저장되었습니다.");
+  };
+
   const onClickConfirmButton = () => {
-    if (email == User.email && pw == User.pw) {
-      alert("로그인에 성공했습니다.");
-    } else {
-      alert("존재하지 않는 회원입닌다.");
-    }
+    onClickLogin();
+    // if (email == User.email && pw == User.pw) {
+    //   alert("로그인에 성공했습니다.");
+    // } else {
+    //   alert("존재하지 않는 회원입닌다.");
+    // }
   };
 
   return (

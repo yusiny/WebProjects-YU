@@ -11,11 +11,21 @@ import {
   faHomeAlt,
   faRoad,
   faEllipsisH,
+  faPencil,
+  faBookmark,
+  faBell,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBell as faBellR,
+  faUser as faUserR,
+  faBookmark as faBookmarkR,
+} from "@fortawesome/free-regular-svg-icons";
 
 export default function Nav() {
   const [login, setLogin] = useState(false);
+  const [isHover, setIsHover] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   return (
     <>
@@ -54,10 +64,43 @@ export default function Nav() {
                 />
               </div>
 
-              <a class="button" onClick={() => setLogin(!login)}>
-                로그인
-              </a>
-              <a class="button_orange"> 회원가입 </a>
+              <Button onClick={() => setLogin(!login)}>로그인</Button>
+              <ButtonOrange class="button_orange"> 회원가입 </ButtonOrange>
+
+              <ButtonGreen class="button_green">
+                <FontAwesomeIcon icon={faPencil} />
+                <span>최근강의</span>
+              </ButtonGreen>
+
+              <NavItem className="nav_item">
+                <a
+                  className="nav_item_hoverble"
+                  id="nav_bookmark"
+                  onMouseEnter={() => setIsHover(true)}
+                  onMouseLeave={() => setIsHover(false)}
+                >
+                  {!isHover ? (
+                    <FontAwesomeIcon icon={faBookmarkR} />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faBookmark}
+                      style={{ color: "#00c471" }}
+                    />
+                  )}
+                </a>
+
+                <div className="nav_bookmark_count">1</div>
+              </NavItem>
+              <NavItem className="nav_item">
+                <a className="nav_item_hoverble" id="nav_notification">
+                  <FontAwesomeIcon icon={faBellR} />
+                </a>
+              </NavItem>
+              <NavItem className="nav_item" id="nav_user">
+                <a className="nav_item_hoverble">
+                  <FontAwesomeIcon icon={faUserR} />
+                </a>
+              </NavItem>
             </div>
           </div>
         </NavDesktop>
@@ -304,5 +347,72 @@ const NavBottom = styled.div`
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.5;
+  }
+`;
+
+const Button = styled.a`
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 8px;
+  margin-right: 8px;
+
+  font-size: 1rem;
+  line-height: 1;
+
+  cursor: pointer;
+`;
+
+const ButtonOrange = styled(Button)`
+  background-color: #ff7867;
+  border: 1px solid #dbdbdb;
+  color: #fff;
+`;
+
+const ButtonGreen = styled(Button)`
+  background-color: #00c471;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-left: 0.25rem;
+  }
+`;
+
+const NavItem = styled.div`
+  display: flex;
+  position: relative;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  color: #495057;
+
+  .nav_item_hoverble {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+  }
+
+  .nav_bookmark_count {
+    position: absolute;
+    z-index: 2;
+    top: -4px;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    min-width: 16px;
+    height: 16px;
+    color: #fff;
+    background: #ff5b16;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: -1px;
   }
 `;
