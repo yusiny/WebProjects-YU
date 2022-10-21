@@ -61,10 +61,10 @@ export default function Home() {
           </p>
           <div id="review_buttons">
             <a class="button_green">
-              수강평 더보기 <img src="/assets/ic_right.svg" />{" "}
+              수강평 더보기 <img src="/assets/ic_right_white.svg" />{" "}
             </a>
             <a class="button_green">
-              기능/강좌 요청하기 <img src="/assets/ic_right.svg" />{" "}
+              기능/강좌 요청하기 <img src="/assets/ic_right_white.svg" />{" "}
             </a>
           </div>
         </div>

@@ -158,7 +158,6 @@ main {
   font-size: 16px;
   color: #333;
   border-radius: 3px;
-  border: 1px solid #1dc078;
   background-color: #fff;
   line-height: 1;
   padding: 10px 16px;
@@ -173,7 +172,7 @@ main {
 }
 
 .button_green:hover {
-  background-color: rgba(29, 192, 120, 0.12);
+  background-color: rgba(29, 192, 120, 0.5);
 }
 
 #review_right {
